@@ -1,0 +1,47 @@
+body {
+  display: grid;
+
+  grid-template-rows: 50px 8fr 50px;
+
+  grid-template-columns: 3fr 7fr 3fr;
+
+  grid-gap: 10px;
+
+  grid-template-areas: ". banner ."
+                       ". content ."
+                       ". footer .";
+}
+
+.box {
+  border: 5px solid #eee;
+}
+
+.banner {
+  grid-area: banner;
+  background-color: LightBlue;
+  text-align: center;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: LightBlue;
+  text-align: center;
+}
+
+.navigation {
+  grid-area: navigation;
+}
+
+.content {
+  grid-area: content;
+}
+
+/* Code Boxes */
+pre {
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 5px #eee;
+  background: #f8f8f8;
+  padding: 1em;
+  overflow-x: auto;
+}
+code { background: #f9f9f9; }
