@@ -17,376 +17,388 @@
 
   <main>
 
-    I used to bookmark pages that interested me but found I never visited them again. Bookmarks work better for sites
-    that you visit every day, particularly at work. I use this page to store sites that I don't visit every day.
+    <section>
+      I used to bookmark pages that interested me but found I never visited them again. Bookmarks work better for sites
+      that you visit every day, particularly at work. I use this page to store sites that I don't visit every day.
 
-    <br><br>
+      <br><br>
 
-    Click <button onclick="surpriseMe()">Surprise me</button> to visit a random link
+      Click <button onclick="surpriseMe()">Surprise me</button> to visit a random link
 
-    <script>
-      function surpriseMe() {
-        var num_links = document.links.length;
-        var anchor_index = Math.round(Math.random() * num_links)
-        window.location.href = document.links[anchor_index].href
-      }
-    </script>
+      <script>
+        function surpriseMe() {
+          var num_links = document.links.length;
+          var anchor_index = Math.round(Math.random() * num_links)
+          window.location.href = document.links[anchor_index].href
+        }
+      </script>
+
+    </section>
 
     <h1>Modern Tool Replacements</h1>
-    I know everyone loves vim and grep and sed but there are in fact better alternatives available today. Most of them
-    come from the Rust community.
+    <section>
 
-    <p>
-      <a href="https://github.com/zyedidia/micro">Micro</a><br>
-      A terminal editor that works like you would hope it works. Ctrl+S for save, Ctrl+C/V for copy/paste, Ctrl+Q for
-      quit. Home and End work. Even mouse support.
-    </p>
+      I know everyone loves vim and grep and sed but there are in fact better alternatives available today. Most of them
+      come from the Rust community.
 
-    <p>
-      <a href="https://github.com/BurntSushi/ripgrep">Ripgrep</a><br> Like grep but with easier defaults. Ripgrep by
-      default searches the directory you are in recursively.
-    </p>
+      <p>
+        <a href="https://github.com/zyedidia/micro">Micro</a><br>
+        A terminal editor that works like you would hope it works. Ctrl+S for save, Ctrl+C/V for copy/paste, Ctrl+Q for
+        quit. Home and End work. Even mouse support.
+      </p>
 
-    <p>
-      <a href="https://github.com/sharkdp/fd"> Fd </a><br>Like find but with easier defaults. By default searches your
-      current directory recursively. You can also add an .fdignore file to make it ignore certain directories.
-    </p>
+      <p>
+        <a href="https://github.com/BurntSushi/ripgrep">Ripgrep</a><br> Like grep but with easier defaults. Ripgrep by
+        default searches the directory you are in recursively.
+      </p>
 
-    <p>
-      <a href="https://github.com/chmln/sd">Sd </a><br> Like Sed but easier to use. Works as expected instead of like a
-      Kafka-esque nightmare.
-    </p>
+      <p>
+        <a href="https://github.com/sharkdp/fd"> Fd </a><br>Like find but with easier defaults. By default searches your
+        current directory recursively. You can also add an .fdignore file to make it ignore certain directories.
+      </p>
 
-    <p>
-      <a href="https://github.com/sharkdp/bat">Bat</a><br>
-      Like cat but it highlights and formats and many other things
-    </p>
+      <p>
+        <a href="https://github.com/chmln/sd">Sd </a><br> Like Sed but easier to use. Works as expected instead of like
+        a
+        Kafka-esque nightmare.
+      </p>
 
+      <p>
+        <a href="https://github.com/sharkdp/bat">Bat</a><br>
+        Like cat but it highlights and formats and many other things
+      </p>
+    </section>
 
     <h1>Essential Tools</h1>
-    These are not replacing any old tools, they are just essential anyway.
+    <section>
 
-    <p>
-      <a href="https://github.com/FiloSottile/mkcert">mkcert</a><br>
-      Create a local CA for your dev environment. The CA is installed in all your browsers and your OS-level trust
-      store, which means you can make certs that are not treated as self-signed.
-    </p>
+      These are not replacing any old tools, they are just essential anyway.
 
-    <p>
-      <a href="https://github.com/Neilpang/acme.sh">acme.sh</a><br>
-      Easy LetsEncrypt. Way easier than certbot and with no dependencies.
-    </p>
+      <p>
+        <a href="https://github.com/FiloSottile/mkcert">mkcert</a><br>
+        Create a local CA for your dev environment. The CA is installed in all your browsers and your OS-level trust
+        store, which means you can make certs that are not treated as self-signed.
+      </p>
+
+      <p>
+        <a href="https://github.com/Neilpang/acme.sh">acme.sh</a><br>
+        Easy LetsEncrypt. Way easier than certbot and with no dependencies.
+      </p>
+    </section>
 
     <h1>Software</h1>
-    <p>
-      <a href="https://thewificable.com/2019/10/14/understanding-nsx-t-components">
-        Good NSX-T 2.4 tutorial
-      </a>
-    </p>
+    <section>
+
+      <p>
+        <a href="https://thewificable.com/2019/10/14/understanding-nsx-t-components">
+          Good NSX-T 2.4 tutorial
+        </a>
+      </p>
 
 
 
 
 
-    <p>
-      <a href="https://www.destroyallsoftware.com/compendium/network-protocols?share_key=97d3ba4c24d21147">
-        Explanations of networking concepts that were at the perfect level of depth for me. Not too simple but not
-        focusing too much on what every bit means
-      </a>
-    </p>
+      <p>
+        <a href="https://www.destroyallsoftware.com/compendium/network-protocols?share_key=97d3ba4c24d21147">
+          Explanations of networking concepts that were at the perfect level of depth for me. Not too simple but not
+          focusing too much on what every bit means
+        </a>
+      </p>
 
-    <p>
-      <a href="https://powerdns.org/hello-dns/">
-        Deep but approachable tutorial on DNS
-      </a>
-    </p>
+      <p>
+        <a href="https://powerdns.org/hello-dns/">
+          Deep but approachable tutorial on DNS
+        </a>
+      </p>
 
-    <p>
-      <a href="https://github.com/mido/mido">
-        Python MIDI library that I enjoyed using
-      </a>
-    </p>
+      <p>
+        <a href="https://github.com/mido/mido">
+          Python MIDI library that I enjoyed using
+        </a>
+      </p>
 
-    <p>
-      <a href="https://docs.fedoraproject.org/en-US/docs/">
-        Fedora Docs are looking pretty good these days
-      </a>
-    </p>
+      <p>
+        <a href="https://docs.fedoraproject.org/en-US/docs/">
+          Fedora Docs are looking pretty good these days
+        </a>
+      </p>
 
-    <p>
-      <a href="https://fedoramagazine.org/">
-        I think Fedora Magazine might actually be good
-      </a>
-    </p>
+      <p>
+        <a href="https://fedoramagazine.org/">
+          I think Fedora Magazine might actually be good
+        </a>
+      </p>
 
-    <p>
-      <a href="https://www.happyassassin.net/2014/01/25/uefi-boot-how-does-that-actually-work-then/">
-        Incredible UEFI booting explanation
-      </a>
-    </p>
+      <p>
+        <a href="https://www.happyassassin.net/2014/01/25/uefi-boot-how-does-that-actually-work-then/">
+          Incredible UEFI booting explanation
+        </a>
+      </p>
 
-    <p>
-      <a href="https://jack-vanlightly.com/blog/2017/12/4/rabbitmq-vs-kafka-part-1-messaging-topologies">
-        Very in-depth comparison of RabbitMQ and Kafka
-      </a>
-    </p>
+      <p>
+        <a href="https://jack-vanlightly.com/blog/2017/12/4/rabbitmq-vs-kafka-part-1-messaging-topologies">
+          Very in-depth comparison of RabbitMQ and Kafka
+        </a>
+      </p>
 
-    <p>
-      <a href="https://blog.envoyproxy.io/introduction-to-modern-network-load-balancing-and-proxying-a57f6ff80236">
-        Amazing write-up about L4 vs L7 load balancing
-      </a>
-    </p>
+      <p>
+        <a href="https://blog.envoyproxy.io/introduction-to-modern-network-load-balancing-and-proxying-a57f6ff80236">
+          Amazing write-up about L4 vs L7 load balancing
+        </a>
+      </p>
 
-    <p>
-      <a href="http://www.lurklurk.org/linkers/linkers.html">
-        Great explanation of how C and C++ linkers work
-      </a>
-    </p>
+      <p>
+        <a href="http://www.lurklurk.org/linkers/linkers.html">
+          Great explanation of how C and C++ linkers work
+        </a>
+      </p>
 
-    <p>
-      <a
-        href="https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying">
-        Deep and in-depth explanation of the distributed log from the creator of Kafka
-      </a>
-    </p>
+      <p>
+        <a
+          href="https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying">
+          Deep and in-depth explanation of the distributed log from the creator of Kafka
+        </a>
+      </p>
 
-    <p>
-      <a href="https://prog21.dadgum.com/">
-        One of the top 5 programming blogs of all time
-      </a>
-    </p>
+      <p>
+        <a href="https://prog21.dadgum.com/">
+          One of the top 5 programming blogs of all time
+        </a>
+      </p>
 
-    <p>
-      <a href="https://gridbyexample.com/">
-        CSS Grid by Example
-      </a>
-    </p>
+      <p>
+        <a href="https://gridbyexample.com/">
+          CSS Grid by Example
+        </a>
+      </p>
 
-    <p>
-      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">
-        CSS Grid basics
-      </a>
-    </p>
+      <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">
+          CSS Grid basics
+        </a>
+      </p>
 
-    <p>
-      <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">
-        CSS Grid complete guide
-      </a>
-    </p>
+      <p>
+        <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">
+          CSS Grid complete guide
+        </a>
+      </p>
 
-    <p>
-      <a href="https://github.com/search?o=desc&q=stars%3A%22%3E+5000%22&s=stars&type=Repositories">
-        Github repos with more than 5000 stars
-      </a>
-    </p>
+      <p>
+        <a href="https://github.com/search?o=desc&q=stars%3A%22%3E+5000%22&s=stars&type=Repositories">
+          Github repos with more than 5000 stars
+        </a>
+      </p>
 
-    <p>
-      <a href="https://gitlab.com/explore/projects/starred">
-        Gitlab repos sorted by stars
-      </a>
-    </p>
+      <p>
+        <a href="https://gitlab.com/explore/projects/starred">
+          Gitlab repos sorted by stars
+        </a>
+      </p>
 
-    <p>
-      <a
-        href="https://www.settlersoman.com/vmware-vcenter-distributed-power-management-dpm-overview-and-configuration/">
-        Good vSphere DPM intro
-      </a>
-    </p>
+      <p>
+        <a
+          href="https://www.settlersoman.com/vmware-vcenter-distributed-power-management-dpm-overview-and-configuration/">
+          Good vSphere DPM intro
+        </a>
+      </p>
 
-    <p>
-      <a href="https://vmware.github.io/photon/">
-        vmware Photon OS
-      </a>
-    </p>
+      <p>
+        <a href="https://vmware.github.io/photon/">
+          vmware Photon OS
+        </a>
+      </p>
 
-    <p>
-      <a href="https://metallb.universe.tf/">
-        MetalLB - load balancer for K8s on bare metal
-      </a>
-    </p>
+      <p>
+        <a href="https://metallb.universe.tf/">
+          MetalLB - load balancer for K8s on bare metal
+        </a>
+      </p>
 
-    <p>
-      <a href="https://k8s.devstats.cncf.io/">
-        K8s contributor statistics
-      </a>
-    </p>
+      <p>
+        <a href="https://k8s.devstats.cncf.io/">
+          K8s contributor statistics
+        </a>
+      </p>
 
-    <p>
-      <a href="https://www.internalpointers.com/post/c-c-standard-library">
-        What is the C standard library anyway?
-      </a>
-    </p>
+      <p>
+        <a href="https://www.internalpointers.com/post/c-c-standard-library">
+          What is the C standard library anyway?
+        </a>
+      </p>
 
-    <p>
-      <a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoCLibraryAPIIssues">
-        Reasonable explanation for why Go might not have wanted to use the C standard library to make system calls
-      </a>
-    </p>
+      <p>
+        <a href="https://utcc.utoronto.ca/~cks/space/blog/programming/GoCLibraryAPIIssues">
+          Reasonable explanation for why Go might not have wanted to use the C standard library to make system calls
+        </a>
+      </p>
 
-    <p>
-      <a href="https://robertheaton.com/2020/04/06/systems-design-for-advanced-beginners/">
-        Good overview of every part of a distributed software system. Front end, databases, cache, log, messaging ,etc..
-      </a>
-    </p>
+      <p>
+        <a href="https://robertheaton.com/2020/04/06/systems-design-for-advanced-beginners/">
+          Good overview of every part of a distributed software system. Front end, databases, cache, log, messaging
+          ,etc..
+        </a>
+      </p>
 
-    <p>
-      <a href="https://slack.engineering/deploys-at-slack-cd0d28c61701">
-        How deploys work at Slack
-      </a>
-    </p>
+      <p>
+        <a href="https://slack.engineering/deploys-at-slack-cd0d28c61701">
+          How deploys work at Slack
+        </a>
+      </p>
 
-    <p>
-      <a href="https://joshwcomeau.com/gatsby/a-static-future/">
-        Very interesting article about building very advanced static sites
-      </a>
-    </p>
+      <p>
+        <a href="https://joshwcomeau.com/gatsby/a-static-future/">
+          Very interesting article about building very advanced static sites
+        </a>
+      </p>
 
-    <p>
-      <a href="https://news.ycombinator.com/item?id=22800136">
-        Popular thread on HN about personal blogs. Good stuff in here
-      </a>
-    </p>
+      <p>
+        <a href="https://news.ycombinator.com/item?id=22800136">
+          Popular thread on HN about personal blogs. Good stuff in here
+        </a>
+      </p>
 
-    <p>
-      <a href="https://github.com/jamiehannaford/what-happens-when-k8s">
-        Popular "what happens when you click..." exercise but for Kubernetes
-      </a>
-    </p>
+      <p>
+        <a href="https://github.com/jamiehannaford/what-happens-when-k8s">
+          Popular "what happens when you click..." exercise but for Kubernetes
+        </a>
+      </p>
 
-    <p>
-      <a href="http://beej.us/guide/bgnet/html/">
-        Popular and now classic guide to network programming. Great if you want to learn more about how sockets work
-      </a>
-    </p>
+      <p>
+        <a href="http://beej.us/guide/bgnet/html/">
+          Popular and now classic guide to network programming. Great if you want to learn more about how sockets work
+        </a>
+      </p>
 
-    <p>
-      <a href="http://beej.us/guide/bgipc/html/single/bgipc.html">
-        Guide to Linux IPC. Also explains a lot about fork and exec and how processes work in general
-      </a>
-    </p>
+      <p>
+        <a href="http://beej.us/guide/bgipc/html/single/bgipc.html">
+          Guide to Linux IPC. Also explains a lot about fork and exec and how processes work in general
+        </a>
+      </p>
 
-    <p>
-      <a href="https://www.tek-tips.com/faqs.cfm?fid=381">
-        Great explanation of how traceroute works
-      </a>
-    </p>
+      <p>
+        <a href="https://www.tek-tips.com/faqs.cfm?fid=381">
+          Great explanation of how traceroute works
+        </a>
+      </p>
 
-    <p>
-      <a href="https://realpython.com/python-modules-packages/">
-        Great explanation of Python modules and packages
-      </a>
-    </p>
+      <p>
+        <a href="https://realpython.com/python-modules-packages/">
+          Great explanation of Python modules and packages
+        </a>
+      </p>
 
-    <p>
-      <a href="https://medium.com/swlh/handling-transactions-in-the-microservice-world-c77b275813e0">
-        Good blog post about how distributed transactions work
-      </a>
-    </p>
+      <p>
+        <a href="https://medium.com/swlh/handling-transactions-in-the-microservice-world-c77b275813e0">
+          Good blog post about how distributed transactions work
+        </a>
+      </p>
 
-    <p>
-      <a href="https://news.ycombinator.com/item?id=22846250">Interesting blog post and good HN commentary about
-        bootstrapping every tool in a Linux system.</a>
-    </p>
+      <p>
+        <a href="https://news.ycombinator.com/item?id=22846250">Interesting blog post and good HN commentary about
+          bootstrapping every tool in a Linux system.</a>
+      </p>
 
-
-
+    </section>
 
 
 
 
     <h1>Health</h1>
+    <section>
 
-
-    <p>
-      <a href="https://exrx.net/Kinesiology">
-        Pretty interesting stuff on how your muscles/body move and work
-      </a>
-    </p>
-
-
+      <p>
+        <a href="https://exrx.net/Kinesiology">
+          Pretty interesting stuff on how your muscles/body move and work
+        </a>
+      </p>
+    </section>
 
 
 
     <h1>Music</h1>
+    <section>
 
-
-    <p>
-      <a href="http://musictheorysite.com/creating-diatonic-chord-progressions/">
-        Diatonic chord progressions
-      </a>
-    </p>
-
+      <p>
+        <a href="http://musictheorysite.com/creating-diatonic-chord-progressions/">
+          Diatonic chord progressions
+        </a>
+      </p>
+    </section>
 
     <h1>Deepfakes</h1>
-
-
-    <p>
-      <a href="https://youtu.be/yaq4sWFvnAY">
-        Fake Nixon Apollo 11
-      </a>
-    </p>
-
-    <p>
-      <a href="https://youtu.be/cQ54GDm1eL0">
-        Jordan Peele Obama
-      </a>
-    </p>
-
-    <p>
-      <a href="https://www.instagram.com/p/BypkGIvFfGZ/?utm_source=ig_web_copy_link">
-        Zuckerberg being honest
-      </a>
-    </p>
-
-    <p>
-      <a href="https://www.instagram.com/p/B4weOARl-r-/?utm_source=ig_web_copy_link">
-        Bojo deepfake
-      </a>
-    </p>
+    <section>
 
 
 
+      <p>
+        <a href="https://youtu.be/yaq4sWFvnAY">
+          Fake Nixon Apollo 11
+        </a>
+      </p>
+
+      <p>
+        <a href="https://youtu.be/cQ54GDm1eL0">
+          Jordan Peele Obama
+        </a>
+      </p>
+
+      <p>
+        <a href="https://www.instagram.com/p/BypkGIvFfGZ/?utm_source=ig_web_copy_link">
+          Zuckerberg being honest
+        </a>
+      </p>
+
+      <p>
+        <a href="https://www.instagram.com/p/B4weOARl-r-/?utm_source=ig_web_copy_link">
+          Bojo deepfake
+        </a>
+      </p>
+
+    </section>
 
     <h1>Life in general</h1>
+    <section>
 
-
-    <p>
-      <a href="https://tomcritchlow.com/2019/11/18/yes-and/">
-        4-part series about how work is performance theater
-      </a>
-    </p>
-
-
-
-    <p>
-      <a href="http://gregorygundersen.com/blog/2020/01/12/why-research-blog/">
-        Convincing explanation for why writing is key to learning
-      </a>
-    </p>
+      <p>
+        <a href="https://tomcritchlow.com/2019/11/18/yes-and/">
+          4-part series about how work is performance theater
+        </a>
+      </p>
 
 
 
+      <p>
+        <a href="http://gregorygundersen.com/blog/2020/01/12/why-research-blog/">
+          Convincing explanation for why writing is key to learning
+        </a>
+      </p>
 
 
-    <p>
-      <a href="https://commoncog.com/blog/get-numb-get-good/">
-        Great insight into how fear gets in the way of developing your skills. Don't worry about getting good at
-        something until you stop being afraid of doing that something.
-      </a>
-    </p>
 
-    <p>
-      <a href="https://stackingthebricks.com/the-harsh-truth-about-fear/">
-        The harsh truth about fear is that it's a cop out. You're probably just lazy.
-      </a>
-    </p>
 
-    <p>
-      <a href="https://www.youtube.com/watch?v=pW-SOdj4Kkk">
-        Very good talk about how knowledge is not guaranteed to be passed on to the next generation. Technological
-        progress is not guaranteed.
-      </a>
-    </p>
+
+      <p>
+        <a href="https://commoncog.com/blog/get-numb-get-good/">
+          Great insight into how fear gets in the way of developing your skills. Don't worry about getting good at
+          something until you stop being afraid of doing that something.
+        </a>
+      </p>
+
+      <p>
+        <a href="https://stackingthebricks.com/the-harsh-truth-about-fear/">
+          The harsh truth about fear is that it's a cop out. You're probably just lazy.
+        </a>
+      </p>
+
+      <p>
+        <a href="https://www.youtube.com/watch?v=pW-SOdj4Kkk">
+          Very good talk about how knowledge is not guaranteed to be passed on to the next generation. Technological
+          progress is not guaranteed.
+        </a>
+      </p>
+    </section>
 
   </main>
 
