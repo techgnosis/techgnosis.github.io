@@ -17,12 +17,15 @@
 
   <div class="content">
 
-    <a href="#health">Health</a>
-    <a href="#music">Music</a>
-    <a href="#deepfakes">Deepfakes</a>
-    <a href="#life">Life</a>
+    <button type="button" onclick="surpriseMe()">Surprise me</button>
 
-    <button type="button">Surprise me</button>
+    <script>
+      function surpriseMe() {
+        var num_links = document.links.length;
+        var anchor_index = Math.round(Math.random() * num_links)
+        window.location.href = document.links[anchor_index].href
+      }
+    </script>
 
     <h1>Software</h1>
     <p>
@@ -248,9 +251,9 @@
 
 
 
-    <a name="health">
-      <h1>Health</h1>
-    </a>
+
+    <h1>Health</h1>
+
 
     <p>
       <a href="https://exrx.net/Kinesiology">
@@ -261,9 +264,9 @@
 
 
 
-    <a name="music">
-      <h1>Music</h1>
-    </a>
+
+    <h1>Music</h1>
+
 
     <p>
       <a href="http://musictheorysite.com/creating-diatonic-chord-progressions/">
@@ -271,9 +274,9 @@
       </a>
     </p>
 
-    <a name="deepfakes">
-      <h1>Deepfakes</h1>
-    </a>
+
+    <h1>Deepfakes</h1>
+
 
     <p>
       <a href="https://youtu.be/yaq4sWFvnAY">
@@ -301,9 +304,9 @@
 
 
 
-    <a name="life">
-      <h1>Life in general</h1>
-    </a>
+
+    <h1>Life in general</h1>
+
 
     <p>
       <a href="https://tomcritchlow.com/2019/11/18/yes-and/">
