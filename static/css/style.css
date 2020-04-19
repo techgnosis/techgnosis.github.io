@@ -28,20 +28,6 @@ body {
   text-align: center;
 }
 
-.navigation {
-  grid-area: navigation;
-}
-
 .content {
   grid-area: content;
 }
-
-/* Code Boxes */
-pre {
-  border: 1px solid #ddd;
-  box-shadow: 5px 5px 5px #eee;
-  background: #f8f8f8;
-  padding: 1em;
-  overflow-x: auto;
-}
-code { background: #f9f9f9; }
