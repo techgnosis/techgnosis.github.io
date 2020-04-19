@@ -17,19 +17,19 @@ a:link {
   color: black
 }
 
-.banner {
+header {
   grid-area: banner;
   background-color: #85774e;
   text-align: center;
   font-size: xx-large;
 }
 
-.footer {
+footer {
   grid-area: footer;
   background-color: #85774e;
   text-align: center;
 }
 
-.content {
+main {
   grid-area: content;
 }
