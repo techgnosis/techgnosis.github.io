@@ -7,6 +7,7 @@
   <title>newtools.dev</title>
   <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="static/css/style.css" />
+  <script src="static/js/surpriseMe.js"></script>
 </head>
 
 <body>
@@ -24,14 +25,6 @@
       <br><br>
 
       Click <button onclick="surpriseMe()">Surprise me</button> to visit a random link
-
-      <script>
-        function surpriseMe() {
-          var num_links = document.links.length;
-          var anchor_index = Math.round(Math.random() * num_links)
-          window.location.href = document.links[anchor_index].href
-        }
-      </script>
 
     </section>
 
