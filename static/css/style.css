@@ -12,19 +12,21 @@ body {
                        ". footer .";
 }
 
-.box {
-  border: 5px solid #eee;
+
+a:link {
+  color: black
 }
 
 .banner {
   grid-area: banner;
-  background-color: LightBlue;
+  background-color: #85774e;
   text-align: center;
+  font-size: xx-large;
 }
 
 .footer {
   grid-area: footer;
-  background-color: LightBlue;
+  background-color: #85774e;
   text-align: center;
 }
 
