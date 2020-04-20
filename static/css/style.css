@@ -27,7 +27,6 @@ header {
 footer {
   grid-area: footer;
   background-color: #85774e;
-  text-align: center;
 }
 
 main {
