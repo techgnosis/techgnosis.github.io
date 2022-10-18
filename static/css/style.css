@@ -12,7 +12,6 @@ body {
                        ". footer .";
 }
 
-
 a:link {
   color: black
 }
@@ -31,4 +30,7 @@ footer {
 
 main {
   grid-area: content;
+  width: 200px;
+  word-break: break-all;
+  white-space: normal;
 }
