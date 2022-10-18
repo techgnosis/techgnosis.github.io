@@ -12,6 +12,12 @@ body {
                        ". footer .";
 }
 
+p {
+  width: 200px;
+  word-break: break-all;
+  white-space: normal;
+}
+
 a:link {
   color: black
 }
@@ -30,7 +36,4 @@ footer {
 
 main {
   grid-area: content;
-  width: 200px;
-  word-break: break-all;
-  white-space: normal;
 }
