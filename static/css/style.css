@@ -12,11 +12,6 @@ body {
                        ". footer .";
 }
 
-p {
-  width: 1200px;
-  word-break: break-all;
-  white-space: normal;
-}
 
 a:link {
   color: black
