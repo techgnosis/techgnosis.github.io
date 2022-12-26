@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Streaker</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="pink">
+    <h1 class="center">Don't break your streak!</h1>
+
+    <p class="center">
+    <label type="text" for="day1">Day 1</label>
+    <input type="date" id="day1" name="day1">
+    </p>
+
+    <div class="center" id="days-div"></div>
+
+    <script>
+        const input = document.querySelector('#day1');
+        const dateString = window.localStorage.getItem("dateString")
+        var today = new Date()
+        if (dateString) {
+            input.value = dateString
+        } else {
+            input.value = today.value
+        }
+        calculateDays()
+
+        input.addEventListener('input', () => {
+            calculateDays()
+        });
+
+        function calculateDays() {
+            window.localStorage.setItem("dateString", input.value)
+            today = new Date()
+            const inputDate = new Date(input.value)
+            
+            // I don't get my own logic here but it works
+            // The math checks out when I calculate `days`
+            today.setHours(today.getHours())
+            inputDate.setHours(inputDate.getHours() + 8)
+            
+            const milliseconds = today.getTime() - inputDate.getTime()
+            var days = milliseconds / 1000 / 60 / 60 / 24
+            console.log("Days: " + days)
+            if (!days) {
+                days = 0
+            } else {
+                days = parseInt(days, 10)
+            }
+            document.getElementById('days-div').innerHTML = "It has been " + days + " full days. You are in day <b>" + (days+1) +"</b>";
+        }
+    </script>
+
+  </body>
+
+</html>
