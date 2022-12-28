@@ -32,19 +32,17 @@
       <h1>Essentials</h1>
 
       <p>
-        These are the tools I use every day. Some of them are modern replacements for classic tools (ripgrep replaces grep, fd replaces find, etc..) and
-        some are just essential.
+        These are the tools I use every day. Some of them are modern replacements for classic tools (ripgrep replaces grep, fd replaces find, etc..) and some are just essential.
       </p>
 
       <p>
         <a href="https://github.com/zyedidia/micro">micro</a><br>
-        A terminal editor that works like you would hope it works. Ctrl+S for save, Ctrl+C/V for copy/paste, Ctrl+Q for
-        quit. Home and End work. Even mouse support.
+        A terminal editor that works like you would hope it works. Ctrl+S for save, Ctrl+C/V for copy/paste, Ctrl+Q for quit. Home and End work. Even mouse support.
       </p>
 
       <p>
-        <a href="https://github.com/BurntSushi/ripgrep">ripgrep</a><br> Like grep but with easier defaults. Ripgrep by
-        default searches the directory you are in recursively.
+        <a href="https://github.com/BurntSushi/ripgrep">ripgrep</a><br>
+        Like grep but with easier defaults. Ripgrep by default searches the directory you are in recursively.
       </p>
       
       <p>
@@ -53,14 +51,13 @@
       </p>
 
       <p>
-        <a href="https://github.com/sharkdp/fd"> fd </a><br>Like find but with easier defaults. By default searches your
-        current directory recursively. You can also add an .fdignore file to make it ignore certain directories.
+        <a href="https://github.com/sharkdp/fd">fd</a><br>
+        Like find but with easier defaults. By default searches your current directory recursively. You can also add an .fdignore file to make it ignore certain directories.
       </p>
 
       <p>
-        <a href="https://github.com/chmln/sd">sd </a><br> Like sed but easier to use. Works as expected instead of like
-        a
-        Kafka-esque nightmare.
+        <a href="https://github.com/chmln/sd">sd</a><br>
+        Like sed but easier to use.
       </p>
 
       <p>
@@ -70,8 +67,7 @@
 
       <p>
         <a href="https://github.com/FiloSottile/mkcert">mkcert</a><br>
-        Create a local CA for your dev environment. The CA is installed in all your browsers and your OS-level trust
-        store, which means you can make certs that are not treated as self-signed.
+        Create a local CA for your dev environment. The CA is installed in all your browsers and your OS-level trust store, which means you can make certs that are not treated as self-signed.
       </p>
 
       <p>
@@ -134,11 +130,6 @@
         The original Ethereum client, written in Golang. Emits custom metric format.
       </p>
       
-      
-      
-      
-      
-      
     </section>
     
     <section>
@@ -165,11 +156,6 @@
       </p>
       
       <p>
-        <a href="https://cert-manager.io/docs/">cert-manager</a><br>
-        Self-service TLS certs powered by K8s resources. Hooks up to Vault and Venafi for enterprise users
-      </p>
-      
-      <p>
         <a href="https://github.com/rancher/k3d">k3d</a><br>
         Deploys multi-node k3s clusters via Docker
      </p>
@@ -185,39 +171,33 @@
       
       <p>
         <a href="https://microsoft.github.io/language-server-protocol/">Language Server Protocol</a><br>
-        Decouples the language support from the editor. Prevents only certain editors from being the best at a particular language
-        and instead allows editors to focus on text editing features.
+        Decouples the language support from the editor. Prevents only certain editors from being the best at a particular language and instead allows editors to focus on text editing features.
       </p>
       
       <p>
         <a href="https://github.com/rust-analyzer/rust-analyzer">rust-analyzer</a><br>
-        Rust had one of the first language servers, rls. rust-analyzer is the gen2 version of rls and does not rely on code compilation
-        to learn about your code.
+        Rust had one of the first language servers, rls. rust-analyzer is the gen2 version of rls and does not rely on code compilation to learn about your code.
       </p>
       
       <p>
         <a href="https://github.com/golang/vscode-go#language-server">gopls</a><br>
-        Go also has a language server. Its functionality replaces the collection of CLI tools that the VS Code extension relies
-        on by default. Despite being in alpha the docs say "gopls is recommended for projects that use Go modules."
+        Go also has a language server. Its functionality replaces the collection of CLI tools that the VS Code extension relies on by default. Despite being in alpha the docs say "gopls is recommended for projects that use Go modules."
       </p>
       
       
       <p>
         <a href="https://github.com/indygreg/PyOxidizer">PyOxidizer</a><br>
-        Turn your Python project into a single executable. Can be a static executable if you want to link against musl. PyOxidizer itself is a Rust
-        project.
+        Turn your Python project into a single executable. Can be a static executable if you want to link against musl. PyOxidizer itself is a Rust project.
       </p>
       
       <p>
         <a href="https://deno.land/">Deno</a><br>
-        TypeScript runtime in a single executable. Can create single executables out of your TypeScript, like PyOxidizer above. Simplify distribution
-        whether to end users or servers.
+        TypeScript runtime in a single executable. Can create single executables out of your TypeScript, like PyOxidizer above. Simplify distribution whether to end users or servers.
       </p>
       
       <p>
         <a href="https://ziglang.org/">Zig</a><br>
-        Some say its the actual new C, instead of Rust. Zig is self-described as "better at using C libraries than C is at using C libraries."
-        Simple language with build tools and cross-compilation included. Zig has a language server that follows the LSP as discussed a few posts above.
+        Some say its the actual new C, instead of Rust. Zig is self-described as "better at using C libraries than C is at using C libraries." Simple language with build tools and cross-compilation included. Zig has a language server that follows the LSP as discussed a few posts above.
       </p>
       
     </section>
@@ -227,15 +207,13 @@
       <h1>Kubernetes</h1>
 
       <p>
-        <a href="https://metallb.universe.tf/">
-          MetalLB - load balancer for K8s on bare metal
-        </a>
+        <a href="https://metallb.universe.tf/">MetalLB</a><br>
+         Load balancer for K8s on bare metal
       </p>
       
       <p>
         <a href="https://github.com/seaweedfs/seaweedfs">SeaweedFS</a><br>
-        Distributed file system that provides S3 API, a user interface for POSIX-style file management, and a CSI driver to create read-write-many volumes.
-        It has a stated goal of being easier to use than other offerings and it shows. It is incredibly easy to use.
+        Distributed file system that provides S3 API, a user interface for POSIX-style file management, and a CSI driver to create read-write-many volumes. It has a stated goal of being easier to use than other offerings and it shows. It is incredibly easy to use.
       </p>
 
       <p>
@@ -251,16 +229,21 @@
       </p>
 
       <p>
-        <a href="https://blog.pipetail.io/posts/2020-05-04-most-common-mistakes-k8s/">Common K8s mistakes. Really good
-          article</a>
+        <a href="https://blog.pipetail.io/posts/2020-05-04-most-common-mistakes-k8s/">
+          Common K8s mistakes. Really good article
+        </a>
       </p>
       
       <p>
-        <a href="https://medium.com/swlh/starting-an-internal-kubernetes-offering-a1cd3bed2e0"> Starting an internal K8s offering </a>
+        <a href="https://medium.com/swlh/starting-an-internal-kubernetes-offering-a1cd3bed2e0">
+          Starting an internal K8s offering
+        </a>
       </p>
       
       <p>
-        <a href="https://news.ycombinator.com/item?id=23354418">Why is K8s so popular?</a>
+        <a href="https://news.ycombinator.com/item?id=23354418">
+          Why is K8s so popular?
+        </a>
       </p>
 
     </section>
@@ -287,7 +270,9 @@
     <section>
       <h1>Auth</h1>
       <p>
-        <a href="https://stackoverflow.blog/2022/12/22/the-complete-guide-to-protecting-your-apis-with-oauth2">The Complete Guide to Protecting Your APIs with OAuth2</a>
+        <a href="https://stackoverflow.blog/2022/12/22/the-complete-guide-to-protecting-your-apis-with-oauth2">
+          The Complete Guide to Protecting Your APIs with OAuth2
+        </a>
       </p>
 
 
@@ -295,11 +280,15 @@
       <h1>Software</h1>
       
       <p>
-        <a href="https://bootlin.com/blog/an-introduction-to-pipewire/">Introduction to Pipewire</a>
+        <a href="https://bootlin.com/blog/an-introduction-to-pipewire/">
+          Introduction to Pipewire
+        </a>
       </p>
       
       <p>
-        <a href="https://hackernoon.com/demystifying-oauth-2-0-and-openid-connect-and-saml-12aa4cf9fdba">Great explanation of OAuth2 vs OIDC</a>
+        <a href="https://hackernoon.com/demystifying-oauth-2-0-and-openid-connect-and-saml-12aa4cf9fdba">
+          Great explanation of OAuth2 vs OIDC
+        </a>
       </p>
       
       <p>
@@ -309,20 +298,22 @@
       </p>
 
       <p>
-        <a href="https://siliconsprawl.com/2020/05/10/network-programming-self-study.html"></a><br>
-        Good articles for developers to understand networking concepts
+        <a href="https://siliconsprawl.com/2020/05/10/network-programming-self-study.html">
+          Good articles for developers to understand networking concepts
+        </a>
       </p>
       
       <p>
-        <a href="https://thelig.ht/correct-exceptions/">How to Use Exceptions Correctly</a><br>
+        <a href="https://thelig.ht/correct-exceptions/">
+          How to Use Exceptions Correctly
+        </a>
       </p>
 
 
 
       <p>
         <a href="https://www.destroyallsoftware.com/compendium/network-protocols?share_key=97d3ba4c24d21147">
-          Explanations of networking concepts that were at the perfect level of depth for me. Not too simple but not
-          focusing too much on what every bit means
+          Explanations of networking concepts that were at the perfect level of depth for me. Not too simple but not focusing too much on what every bit means
         </a>
       </p>
 
@@ -420,10 +411,6 @@
         </a>
       </p>
 
-
-
-
-
       <p>
         <a href="https://www.internalpointers.com/post/c-c-standard-library">
           What is the C standard library anyway?
@@ -438,8 +425,7 @@
 
       <p>
         <a href="https://robertheaton.com/2020/04/06/systems-design-for-advanced-beginners/">
-          Good overview of every part of a distributed software system. Front end, databases, cache, log, messaging
-          ,etc..
+          Good overview of every part of a distributed software system. Front end, databases, cache, log, messaging, etc..
         </a>
       </p>
 
@@ -495,30 +481,31 @@
       
       <p>
         <a href="https://github.com/vmware/govmomi/tree/master/govc">govc</a><br>
-        The actual vSphere CLI. The other ones are outdated or deprecated. This one is written in Go and based on a
-        separate Golang library called govmomi. govmomi is a dependency for large projects like K8s and Terraform.
+        The actual vSphere CLI. The other ones are outdated or deprecated. This one is written in Go and based on a separate Golang library called govmomi. govmomi is a dependency for large projects like K8s and Terraform.
       </p>
 
       <p>
-        <a href="https://news.ycombinator.com/item?id=22846250">Interesting blog post and good HN commentary about
-          bootstrapping every tool in a Linux system.</a>
+        <a href="https://news.ycombinator.com/item?id=22846250">
+          Interesting blog post and good HN commentary about bootstrapping every tool in a Linux system.
+        </a>
       </p>
 
       <p>
-        <a href="https://developers.google.com/tech-writing/overview">Free technical writing course from Google</a>
+        <a href="https://developers.google.com/tech-writing/overview">
+          Free technical writing course from Google
+        </a>
       </p>
 
       <p>
-        <a href="https://duo.com/blog/the-beer-drinkers-guide-to-saml"> Beer drinkers guide to SAML. Really easy to read
-          introduction to SAML. </a>
+        <a href="https://duo.com/blog/the-beer-drinkers-guide-to-saml">
+          Beer drinkers guide to SAML. Really easy to read introduction to SAML
+        </a>
       </p>
 
       <p>
-        <a href="https://medium.com/@srinivasan.surprise/unpack-cloud-native-buildpacks-9959b601424b"> Explanation of
-          Cloud Native Buildpacks (CNB) and Paketo Buildpacks </a>
+        <a href="https://medium.com/@srinivasan.surprise/unpack-cloud-native-buildpacks-9959b601424b">
+          Explanation of Cloud Native Buildpacks (CNB) and Paketo Buildpacks </a>
       </p>
-
-
 
     </section>
 
@@ -555,7 +542,9 @@
       <h1>Life in general</h1>
       
       <p>
-        <a href="https://www.allaboutcircuits.com/textbook/"> All About Circuits </a>
+        <a href="https://www.allaboutcircuits.com/textbook/">
+          All About Circuits
+        </a>
       </p>
 
       <p>
@@ -573,13 +562,9 @@
       </p>
 
 
-
-
-
       <p>
         <a href="https://commoncog.com/blog/get-numb-get-good/">
-          Great insight into how fear gets in the way of developing your skills. Don't worry about getting good at
-          something until you stop being afraid of doing that something.
+          Great insight into how fear gets in the way of developing your skills. Don't worry about getting good at something until you stop being afraid of doing that something.
         </a>
       </p>
 
@@ -591,13 +576,14 @@
 
       <p>
         <a href="https://www.youtube.com/watch?v=pW-SOdj4Kkk">
-          Very good talk about how knowledge is not guaranteed to be passed on to the next generation. Technological
-          progress is not guaranteed.
+          Very good talk about how knowledge is not guaranteed to be passed on to the next generation. Technological progress is not guaranteed.
         </a>
       </p>
       
       <p>
-        <a href="http://srid.ca">Fellow I found on lobste.rs that has some interesting philosophies</a>
+        <a href="http://srid.ca">
+          Fellow I found on lobste.rs that has some interesting philosophies
+        </a>
       </p>
     </section>
 
