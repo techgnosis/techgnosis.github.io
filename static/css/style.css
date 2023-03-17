@@ -32,3 +32,14 @@ footer {
 main {
   grid-area: content;
 }
+
+
+
+nav {
+	text-align: center;
+}
+
+li {
+	display: inline-block;
+	margin: 0 10px;
+}
