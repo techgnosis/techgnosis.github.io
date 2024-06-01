@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html><head lang="en"><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Macos_no_admin - Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="How to be productive on macOS without Administrator Sometimes you find yourself working somewhere that treats developers like children. You get a shitty corporate laptop that is super locked down and that&rsquo;s just how it is. Fear not, you don&rsquo;t need Administrator permissions to setup a productive environment.
+homebrew custom prefix You can install homebrew anywhere. You are not limited to the default /opt/homebrew which requires Administrator permissions during install. It is very unsupported, however, and they make that very clear on their site." />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="http://localhost:1313/blog/posts/macos_no_admin/">
+  <meta property="og:site_name" content="Blog">
+  <meta property="og:title" content="Macos_no_admin">
+  <meta property="og:description" content="How to be productive on macOS without Administrator Sometimes you find yourself working somewhere that treats developers like children. You get a shitty corporate laptop that is super locked down and that&amp;rsquo;s just how it is. Fear not, you don&amp;rsquo;t need Administrator permissions to setup a productive environment.
+homebrew custom prefix You can install homebrew anywhere. You are not limited to the default /opt/homebrew which requires Administrator permissions during install. It is very unsupported, however, and they make that very clear on their site.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+  <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-06-01T15:40:50-07:00">
+    <meta property="article:modified_time" content="2024-06-01T15:40:50-07:00">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="Macos_no_admin">
+<meta name="twitter:description" content="How to be productive on macOS without Administrator Sometimes you find yourself working somewhere that treats developers like children. You get a shitty corporate laptop that is super locked down and that&rsquo;s just how it is. Fear not, you don&rsquo;t need Administrator permissions to setup a productive environment.
+homebrew custom prefix You can install homebrew anywhere. You are not limited to the default /opt/homebrew which requires Administrator permissions during install. It is very unsupported, however, and they make that very clear on their site.">
+
+	
+        <link href="http://localhost:1313/blog/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/blog/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="http://localhost:1313/blog/">Blog</a>
+	</div>
+	<nav>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Macos_no_admin</h1>
+			<div class="meta">Posted on Jun 1, 2024 <span class="draft-label">DRAFT</span> </div>
+		</div>
+		
+
+		<section class="body">
+			<h1 id="how-to-be-productive-on-macos-without-administratorh1">How to be productive on macOS without Administrator<!-- raw HTML omitted --></h1>
+<p>Sometimes you find yourself working somewhere that treats developers like children. You get a shitty corporate laptop that is super locked down and that&rsquo;s just how it is. Fear not, you don&rsquo;t need Administrator permissions to setup a productive environment.</p>
+<h2 id="homebrew-custom-prefix">homebrew custom prefix</h2>
+<p>You can install homebrew anywhere. You are not limited to the default <!-- raw HTML omitted -->/opt/homebrew<!-- raw HTML omitted --> which requires Administrator permissions during install. It is very unsupported, however, and they make that very clear on their site. Despite that, I have had very minimal issues. Give it a shot. It&rsquo;s simple, just follow the <a href="%22https://docs.brew.sh/Installation#untar-anywhere-unsupported%22">docs</a>.</p>
+<h2 id="avoid-quarantine-with-curl">Avoid quarantine with curl</h2>
+<p>If you download your favorite CLI tool from GitHub and try to run it, you will find that macOS Gatekeeper gets in your way. You have to go to Settings -&gt; Privacy -&gt; and click &ldquo;Allow anyway&rdquo; to let the particular file be executed. However, no surprise here, you need Administrator permissions to click that button. Luckily, this system is not as onerous as you might think. macOS is not peering into this binary and deciding it is unfit for execution. It&rsquo;s actually looking at a simple filesystem flag called the quarantine flag. That quarantine flag is set upon download by your browser and, you guessed it, you can&rsquo;t remove the flag without Administrator permissions.</p>
+<p>However, you can download the file with curl instead. curl does not set any quarantine flag upon download. Then you are free to use all the amazing tools found in GitHub.</p>
+<p>You can download files with curl via <code>curl -L -O my-url-here</code></p>
+<h2 id="unpack-pkg-files">Unpack .pkg files</h2>
+<p>Sometimes software shops do silly things like package simple CLIs into .pkg files that install to /usr/local/bin, which as you might guess, requires Administrator permissions. I&rsquo;m looking at you <em>1Password</em>. Shame.</p>
+<p>Anyway, luckily there are plenty of tools you can use to unpack .pkg files and you can grab the tool you need without having to actually run the .pkg. I recommend <a href="%22https://www.charlessoft.com%22">Pacifist</a>.</p>
+<h2 id="applications">Applications</h2>
+<p>.app files do not have to be in /Applications. You can put them anywhere in your path and Finder will pick it up. You can also make a ~/Applications directory and Finder will add that little &lsquo;A&rsquo; icon to it if you want to feel fancy.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"></div>
+  <div class="footer-info">
+    2024  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+</div>
+    </body>
+</html>
