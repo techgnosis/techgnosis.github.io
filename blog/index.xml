@@ -2,32 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog</title>
-    <link>http://localhost:1313/blog/</link>
+    <link>https://techgnosis.github.io/blog/</link>
     <description>Recent content on Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Jun 2024 15:40:50 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Macos_no_admin</title>
-      <link>http://localhost:1313/blog/posts/macos_no_admin/</link>
-      <pubDate>Sat, 01 Jun 2024 15:40:50 -0700</pubDate>
-      <guid>http://localhost:1313/blog/posts/macos_no_admin/</guid>
-      <description>How to be productive on macOS without Administrator Sometimes you find yourself working somewhere that treats developers like children. You get a shitty corporate laptop that is super locked down and that&amp;rsquo;s just how it is. Fear not, you don&amp;rsquo;t need Administrator permissions to setup a productive environment.&#xA;homebrew custom prefix You can install homebrew anywhere. You are not limited to the default /opt/homebrew which requires Administrator permissions during install. It is very unsupported, however, and they make that very clear on their site.</description>
-    </item>
-    <item>
-      <title>Sports</title>
-      <link>http://localhost:1313/blog/posts/sports/</link>
-      <pubDate>Thu, 25 Apr 2024 16:07:45 -0700</pubDate>
-      <guid>http://localhost:1313/blog/posts/sports/</guid>
-      <description>Sports events without alcohol are a breeze. There are countless ways that sports are made worse with alcohol -&#xA;Having to get up to pee Spending between 13 and 19 dollars per drink Having to pee while you struggle to get home because the crowds leaving the game are insane and the train will take forever Without alcohol you spend less while you&amp;rsquo;re there and you can take the bus or the train home because you aren&amp;rsquo;t in a huge rush</description>
-    </item>
-    <item>
-      <title>Variables</title>
-      <link>http://localhost:1313/blog/posts/variables/</link>
-      <pubDate>Thu, 25 Apr 2024 08:47:52 -0700</pubDate>
-      <guid>http://localhost:1313/blog/posts/variables/</guid>
-      <description>One of the many, many burdens that drugs and alcohol put on you is the inability to distinguish how you really feel because of all the variables at play. Here are some variables off the top of my head -&#xA;are you drunk or high? are you hungover? are you sobering up? are you still recovering from a hangover (it takes many days)? are you lacking quality sleep because you slept drunk or high?</description>
-    </item>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://techgnosis.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
