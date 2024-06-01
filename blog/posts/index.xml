@@ -6,15 +6,8 @@
     <description>Recent content in Posts on Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Jun 2024 15:40:50 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 25 Apr 2024 16:07:45 -0700</lastBuildDate>
     <atom:link href="https://techgnosis.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Tips for being productive on MacOS without admin privileges</title>
-      <link>https://techgnosis.github.io/blog/posts/macos_no_admin/</link>
-      <pubDate>Sat, 01 Jun 2024 15:40:50 -0700</pubDate>
-      <guid>https://techgnosis.github.io/blog/posts/macos_no_admin/</guid>
-      <description>How to be productive on macOS without Administrator Sometimes you find yourself working somewhere that treats developers like children. You get a shitty corporate laptop that is super locked down and that&amp;rsquo;s just how it is. Fear not, you don&amp;rsquo;t need Administrator permissions to setup a productive environment.&#xA;homebrew custom prefix You can install homebrew anywhere. You are not limited to the default /opt/homebrew which requires Administrator permissions during install. It is very unsupported, however, and they make that very clear on their site.</description>
-    </item>
     <item>
       <title>Sports</title>
       <link>https://techgnosis.github.io/blog/posts/sports/</link>
