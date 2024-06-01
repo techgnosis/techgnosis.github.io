@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Index</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>How to be productive on macOS without Administrator</h1>
+  </header>
+
+  <main>
+    <section>
+      Sometimes you find yourself working somewhere that treats developers like children. You get a shitty corporate laptop that is super locked down and that's just how it is. Fear not, you don't need Administrator permissions to setup a productive environment.
+    </section>
+
+
+
+    <section>
+      <h2>homebrew custom prefix</h2>
+      
+      You can install homebrew anywhere. You are not limited to the default <b>/opt/homebrew</b> which requires Administrator permissions during install. It is very unsupported, however, and they make that very clear on their site. Despite that, I have had very minimal issues. Give it a shot. It's simple, just follow the <a href="https://docs.brew.sh/Installation#untar-anywhere-unsupported">docs</a>
+    </section>
+    
+    <section>
+      <h2>Avoid quarantine with curl</h2>
+
+      <p>
+        If you download your favorite CLI tool from GitHub and try to run it, you will find that macOS Gatekeeper gets in your way. You have to go to Settings -> Privacy -> and click "Allow anyway" to let the particular file be executed. However, no surprise here, you need Administrator permissions to click that button. Luckily, this system is not as onerous as you might think. macOS is not peering into this binary and deciding it is unfit for execution. It's actually looking at a simple filesystem flag called the quarantine flag. That quarantine flag is set upon download by your browser and, you guessed it, you can't remove the flag without Administrator permissions.
+      </p>
+
+      <p>
+        However, you can download the file with curl instead. curl does not set any quarantine flag upon download. Then you are free to use all the amazing tools found in GitHub.
+      </p>
+
+      <p>You can download files with curl via <i>curl -L -O my-url-here</i></p>
+    </section>
+
+    <section>
+      <h2>Unpack .pkg files</h2>
+
+      Sometimes software shops do silly things like package simple CLIs into .pkg files that install to /usr/local/bin, which as you might guess, requires Administrator permissions. I'm looking at you <i>1Password</i>. Shame. 
+
+      Anyway, luckily there are plenty of tools you can use to unpack .pkg files and you can grab the tool you need without having to actually run the .pkg. I recommend <a href="https://www.charlessoft.com">Pacifist</a>.
+    </section>
+    
+    <section>
+      <h2>/Applications</h2>
+
+      .app files do not have to be in /Applications. You can put them anywhere in your path and Finder will pick it up. You can also make a ~/Applications directory and Finder will add that little 'A' icon to it if you want to feel fancy.
+    </section>
+
+  </main>
+
+  <footer></footer>
+
+</body>
+
+</html>
