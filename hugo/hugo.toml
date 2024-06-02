@@ -1,0 +1,4 @@
+baseURL = 'https://techgnosis.github.io/blog/'
+languageCode = 'en-us'
+title = 'Musings'
+theme = 'archie'
