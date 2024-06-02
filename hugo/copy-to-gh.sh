@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-
-rm -rf ../techgnosis.github.io/blog/
+rm -rf public
+rm -rf ../blog
 hugo
-cp -r public ../techgnosis.github.io/blog
+cp -r public ../blog
