@@ -1,0 +1,8 @@
+# Generated screenshots from the test harness
+/tools/shots
+
+# Python virtualenv for the Playwright test harness
+/.py3env
+
+# Machine-local Claude Code settings (permissions, etc.)
+/.claude/settings.local.json
