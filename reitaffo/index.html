@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>REIT AFFO per share</title>
 <style>
-  :root { color-scheme:dark; --fg:#e8e8e8; --muted:#999; --bg:#141414; --line:#333; --link:#8ab4f8; --up:#4ac26b; }
+  :root { color-scheme:dark; --fg:#e8e8e8; --muted:#999; --bg:#141414; --line:#333; --link:#8ab4f8; --up:#4ac26b; --down:#f47067; }
   body { font: 16px/1.5 system-ui, sans-serif; color:var(--fg); background:var(--bg); max-width:48rem; margin:2rem auto; padding:0 16px; }
   a { color:var(--link); }
   table { border-collapse:collapse; width:100%; }
   th, td { text-align:left; padding:.4rem .6rem; border-bottom:1px solid var(--line); }
   td.num { text-align:right; font-variant-numeric:tabular-nums; }
   .ath { color:var(--up); font-weight:600; }
+  .cut { color:var(--down); font-weight:600; }
   .legend { color:var(--muted); font-size:.9rem; padding-left:1.2rem; margin-top:1rem; }
   .legend li { margin:.25rem 0; }
   .oneoff { color:var(--muted); font-style:italic; }
@@ -51,6 +52,7 @@
 <ul class="legend">
 <li>Each row is the company's latest quarter. Payout is the dividend as a percent of AFFO.</li>
 <li><span class="ath">Green</span>: the latest quarter set a new all-time high (AFFO, dividend) or a new all-time low (payout).</li>
+<li><span class="cut">Red</span>: the latest dividend is lower than the quarter before.</li>
 <li><span class="oneoff">Grey</span>: a quarter inflated by a one-time item the company left in its AFFO, such as a legal settlement or back rent. It doesn't count toward highs.</li>
 <li>—: no dividend recorded for that quarter.</li>
 </ul>
