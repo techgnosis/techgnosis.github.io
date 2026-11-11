@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GLPI AFFO per share</title>
 <style>
-  :root { --fg:#1a1a1a; --muted:#666; --bg:#fff; --line:#ddd; --link:#0b57d0; }
-  @media (prefers-color-scheme: dark) { :root { --fg:#e8e8e8; --muted:#999; --bg:#141414; --line:#333; --link:#8ab4f8; } }
+  :root { --fg:#1a1a1a; --muted:#666; --bg:#fff; --line:#ddd; --link:#0b57d0; --up:#1a7f37; }
+  @media (prefers-color-scheme: dark) { :root { --fg:#e8e8e8; --muted:#999; --bg:#141414; --line:#333; --link:#8ab4f8; --up:#4ac26b; } }
   body { font: 16px/1.5 system-ui, sans-serif; color:var(--fg); background:var(--bg); max-width:48rem; margin:2rem auto; padding:0 16px; }
   a { color:var(--link); }
   table { border-collapse:collapse; width:100%; }
   th, td { text-align:left; padding:.4rem .6rem; border-bottom:1px solid var(--line); }
   td.num { text-align:right; font-variant-numeric:tabular-nums; }
+  .ath { color:var(--up); font-weight:600; }
   .note { color:var(--muted); font-size:.9rem; }
   .intro { margin-bottom:1.5rem; }
   footer { margin-top:2rem; color:var(--muted); font-size:.85rem; }
@@ -24,41 +25,41 @@
 <table>
 <thead><tr><th>Quarter</th><th style="text-align:right">AFFO / share</th><th>Source</th><th>Note</th></tr></thead>
 <tbody>
-<tr><td>2026Q3</td><td class="num">$1.04</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-reports-record-third-quarter" rel="noopener">source</a></td><td class="note"></td></tr>
-<tr><td>2026Q2</td><td class="num">$1.03</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-reports-record-second-quarter" rel="noopener">source</a></td><td class="note"></td></tr>
-<tr><td>2026Q1</td><td class="num">$1.02</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-reports-record-first-quarter-2026" rel="noopener">source</a></td><td class="note"></td></tr>
-<tr><td>2025Q4</td><td class="num">$0.99</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-record-fourth-2" rel="noopener">source</a></td><td class="note"></td></tr>
-<tr><td>2025Q3</td><td class="num">$0.97</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-reports-record-third-quarter-2025" rel="noopener">source</a></td><td class="note"></td></tr>
+<tr><td>2026Q3</td><td class="num ath" title="All-time high">$1.04</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-reports-record-third-quarter" rel="noopener">source</a></td><td class="note"></td></tr>
+<tr><td>2026Q2</td><td class="num ath" title="All-time high">$1.03</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-reports-record-second-quarter" rel="noopener">source</a></td><td class="note"></td></tr>
+<tr><td>2026Q1</td><td class="num ath" title="All-time high">$1.02</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-reports-record-first-quarter-2026" rel="noopener">source</a></td><td class="note">Entered Virginia, its 21st state; bought Bally&#39;s Lincoln real estate for $700M</td></tr>
+<tr><td>2025Q4</td><td class="num ath" title="All-time high">$0.99</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-record-fourth-2" rel="noopener">source</a></td><td class="note"></td></tr>
+<tr><td>2025Q3</td><td class="num ath" title="All-time high">$0.97</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-reports-record-third-quarter-2025" rel="noopener">source</a></td><td class="note"></td></tr>
 <tr><td>2025Q2</td><td class="num">$0.96</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-reports-second-quarter-2025" rel="noopener">source</a></td><td class="note"></td></tr>
-<tr><td>2025Q1</td><td class="num">$0.96</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-reports-first-quarter-2025-results" rel="noopener">source</a></td><td class="note"></td></tr>
+<tr><td>2025Q1</td><td class="num ath" title="All-time high">$0.96</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-reports-first-quarter-2025-results" rel="noopener">source</a></td><td class="note"></td></tr>
 <tr><td>2024Q4</td><td class="num">$0.95</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-record-fourth-1" rel="noopener">source</a></td><td class="note"></td></tr>
-<tr><td>2024Q3</td><td class="num">$0.95</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-reports-record-third-quarter-2024" rel="noopener">source</a></td><td class="note"></td></tr>
-<tr><td>2024Q2</td><td class="num">$0.94</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-reports-record-second-quarter-2024" rel="noopener">source</a></td><td class="note"></td></tr>
+<tr><td>2024Q3</td><td class="num ath" title="All-time high">$0.95</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-reports-record-third-quarter-2024" rel="noopener">source</a></td><td class="note">Bought the land for Bally&#39;s planned Chicago casino ($250M)</td></tr>
+<tr><td>2024Q2</td><td class="num ath" title="All-time high">$0.94</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-reports-record-second-quarter-2024" rel="noopener">source</a></td><td class="note"></td></tr>
 <tr><td>2024Q1</td><td class="num">$0.92</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-reports-first-quarter-2024-results" rel="noopener">source</a></td><td class="note"></td></tr>
-<tr><td>2023Q4</td><td class="num">$0.93</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-record-fourth-0" rel="noopener">source</a></td><td class="note"></td></tr>
+<tr><td>2023Q4</td><td class="num ath" title="All-time high">$0.93</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-record-fourth-0" rel="noopener">source</a></td><td class="note"></td></tr>
 <tr><td>2023Q3</td><td class="num">$0.92</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-reports-record-third-quarter-2023" rel="noopener">source</a></td><td class="note"></td></tr>
 <tr><td>2023Q2</td><td class="num">$0.92</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-reports-record-second-quarter-2023" rel="noopener">source</a></td><td class="note"></td></tr>
-<tr><td>2023Q1</td><td class="num">$0.92</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-reports-record-first-quarter-2023" rel="noopener">source</a></td><td class="note"></td></tr>
-<tr><td>2022Q4</td><td class="num">$0.89</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-record-fourth-quarter" rel="noopener">source</a></td><td class="note"></td></tr>
+<tr><td>2023Q1</td><td class="num ath" title="All-time high">$0.92</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-reports-record-first-quarter-2023" rel="noopener">source</a></td><td class="note"></td></tr>
+<tr><td>2022Q4</td><td class="num">$0.89</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-record-fourth-quarter" rel="noopener">source</a></td><td class="note">Declared a special dividend of $0.25/share</td></tr>
 <tr><td>2022Q3</td><td class="num">$0.89</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-third-quarter-2022" rel="noopener">source</a></td><td class="note"></td></tr>
-<tr><td>2022Q2</td><td class="num">$0.91</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-second-quarter-2022" rel="noopener">source</a></td><td class="note"></td></tr>
+<tr><td>2022Q2</td><td class="num ath" title="All-time high">$0.91</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-second-quarter-2022" rel="noopener">source</a></td><td class="note"></td></tr>
 <tr><td>2022Q1</td><td class="num">$0.86</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-first-quarter-2022" rel="noopener">source</a></td><td class="note"></td></tr>
-<tr><td>2021Q4</td><td class="num">$0.85</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-fourth-quarter-2021" rel="noopener">source</a></td><td class="note"></td></tr>
+<tr><td>2021Q4</td><td class="num">$0.85</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-fourth-quarter-2021" rel="noopener">source</a></td><td class="note">Added The Cordish Companies as a new major tenant</td></tr>
 <tr><td>2021Q3</td><td class="num">$0.88</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-third-quarter-2021" rel="noopener">source</a></td><td class="note"></td></tr>
 <tr><td>2021Q2</td><td class="num">$0.87</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-record-second-0" rel="noopener">source</a></td><td class="note"></td></tr>
 <tr><td>2021Q1</td><td class="num">$0.84</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-first-quarter-2021" rel="noopener">source</a></td><td class="note"></td></tr>
 <tr><td>2020Q4</td><td class="num">$0.85</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-fourth-quarter-2020" rel="noopener">source</a></td><td class="note"></td></tr>
-<tr><td>2020Q3</td><td class="num">$0.89</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-record-third-quarter" rel="noopener">source</a></td><td class="note"></td></tr>
-<tr><td>2020Q2</td><td class="num">$0.84</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-second-quarter-2020" rel="noopener">source</a></td><td class="note"></td></tr>
-<tr><td>2020Q1</td><td class="num">$0.88</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-first-quarter-2020" rel="noopener">source</a></td><td class="note">COVID-19: all tenants&#39; casinos closed in mid-March</td></tr>
+<tr><td>2020Q3</td><td class="num ath" title="All-time high">$0.89</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-record-third-quarter" rel="noopener">source</a></td><td class="note">Added casino operator Twin River as a new tenant; agreed an asset exchange with Caesars</td></tr>
+<tr><td>2020Q2</td><td class="num">$0.84</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-second-quarter-2020" rel="noopener">source</a></td><td class="note">COVID-19: dividend paid as a mix of cash and company stock</td></tr>
+<tr><td>2020Q1</td><td class="num ath" title="All-time high">$0.88</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-first-quarter-2020" rel="noopener">source</a></td><td class="note">COVID-19: all tenants&#39; casinos closed in mid-March</td></tr>
 <tr><td>2019Q4</td><td class="num">$0.87</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-fourth-quarter-2019" rel="noopener">source</a></td><td class="note"></td></tr>
-<tr><td>2019Q3</td><td class="num">$0.87</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-third-quarter-2019" rel="noopener">source</a></td><td class="note"></td></tr>
-<tr><td>2019Q2</td><td class="num">$0.86</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-record-second-quarter" rel="noopener">source</a></td><td class="note"></td></tr>
-<tr><td>2019Q1</td><td class="num">$0.85</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-record-first-quarter" rel="noopener">source</a></td><td class="note"></td></tr>
+<tr><td>2019Q3</td><td class="num ath" title="All-time high">$0.87</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-third-quarter-2019" rel="noopener">source</a></td><td class="note"></td></tr>
+<tr><td>2019Q2</td><td class="num ath" title="All-time high">$0.86</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-record-second-quarter" rel="noopener">source</a></td><td class="note"></td></tr>
+<tr><td>2019Q1</td><td class="num ath" title="All-time high">$0.85</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-reports-record-first-quarter" rel="noopener">source</a></td><td class="note"></td></tr>
 <tr><td>2018Q4</td><td class="num">$0.84</td><td><a href="https://investors.glpropinc.com/news-releases/news-release-details/gaming-and-leisure-properties-inc-announces-fourth-quarter-and-4" rel="noopener">source</a></td><td class="note"></td></tr>
 </tbody>
 </table>
-<p class="note">Notes mark major events in a quarter, as described in that quarter's own release.</p>
+<p class="note"><span class="ath">Green</span> marks a new all-time high: higher than every earlier quarter. Notes mark major events and milestones in a quarter, as described in that quarter's own release.</p>
 
 <footer>AFFO per share (diluted), as reported. Every figure links to its source. Generated 2026-11-11.</footer>
 </body>

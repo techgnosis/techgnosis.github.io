@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>REIT AFFO per share</title>
 <style>
-  :root { --fg:#1a1a1a; --muted:#666; --bg:#fff; --line:#ddd; --link:#0b57d0; }
-  @media (prefers-color-scheme: dark) { :root { --fg:#e8e8e8; --muted:#999; --bg:#141414; --line:#333; --link:#8ab4f8; } }
+  :root { --fg:#1a1a1a; --muted:#666; --bg:#fff; --line:#ddd; --link:#0b57d0; --up:#1a7f37; }
+  @media (prefers-color-scheme: dark) { :root { --fg:#e8e8e8; --muted:#999; --bg:#141414; --line:#333; --link:#8ab4f8; --up:#4ac26b; } }
   body { font: 16px/1.5 system-ui, sans-serif; color:var(--fg); background:var(--bg); max-width:48rem; margin:2rem auto; padding:0 16px; }
   a { color:var(--link); }
   table { border-collapse:collapse; width:100%; }
   th, td { text-align:left; padding:.4rem .6rem; border-bottom:1px solid var(--line); }
   td.num { text-align:right; font-variant-numeric:tabular-nums; }
+  .ath { color:var(--up); font-weight:600; }
   .note { color:var(--muted); font-size:.9rem; }
   .intro { margin-bottom:1.5rem; }
   footer { margin-top:2rem; color:var(--muted); font-size:.85rem; }
@@ -29,21 +30,21 @@
 <table>
 <thead><tr><th>Symbol</th><th>Latest</th><th style="text-align:right">AFFO / share</th><th style="text-align:right">5y increase</th><th style="text-align:right">10y increase</th></tr></thead>
 <tbody>
-<tr><td><a href="ADC.html">ADC</a></td><td>2026Q3</td><td class="num">$1.15</td><td class="num">&#43;29.2%</td><td class="num">&#43;74.2%</td></tr>
-<tr><td><a href="EPR.html">EPR</a></td><td>2026Q3</td><td class="num">$1.54</td><td class="num">&#43;67.4%</td><td class="num">—</td></tr>
-<tr><td><a href="EPRT.html">EPRT</a></td><td>2026Q3</td><td class="num">$0.51</td><td class="num">&#43;54.5%</td><td class="num">—</td></tr>
-<tr><td><a href="FCPT.html">FCPT</a></td><td>2026Q3</td><td class="num">$0.46</td><td class="num">&#43;17.9%</td><td class="num">&#43;53.3%</td></tr>
-<tr><td><a href="GLPI.html">GLPI</a></td><td>2026Q3</td><td class="num">$1.04</td><td class="num">&#43;18.2%</td><td class="num">—</td></tr>
+<tr><td><a href="ADC.html">ADC</a></td><td>2026Q3</td><td class="num ath" title="All-time high">$1.15</td><td class="num">&#43;29.2%</td><td class="num">&#43;74.2%</td></tr>
+<tr><td><a href="EPR.html">EPR</a></td><td>2026Q3</td><td class="num ath" title="All-time high">$1.54</td><td class="num">&#43;67.4%</td><td class="num">—</td></tr>
+<tr><td><a href="EPRT.html">EPRT</a></td><td>2026Q3</td><td class="num ath" title="All-time high">$0.51</td><td class="num">&#43;54.5%</td><td class="num">—</td></tr>
+<tr><td><a href="FCPT.html">FCPT</a></td><td>2026Q3</td><td class="num ath" title="All-time high">$0.46</td><td class="num">&#43;17.9%</td><td class="num">&#43;53.3%</td></tr>
+<tr><td><a href="GLPI.html">GLPI</a></td><td>2026Q3</td><td class="num ath" title="All-time high">$1.04</td><td class="num">&#43;18.2%</td><td class="num">—</td></tr>
 <tr><td><a href="GTY.html">GTY</a></td><td>2026Q3</td><td class="num">$0.64</td><td class="num">&#43;28.0%</td><td class="num">&#43;42.2%</td></tr>
 <tr><td><a href="MAA.html">MAA</a></td><td>2026Q3</td><td class="num">$1.79</td><td class="num">&#43;14.7%</td><td class="num">&#43;36.6%</td></tr>
 <tr><td><a href="NLCP.html">NLCP</a></td><td>2026Q3</td><td class="num">$0.49</td><td class="num">&#43;58.1%</td><td class="num">—</td></tr>
-<tr><td><a href="NNN.html">NNN</a></td><td>2026Q3</td><td class="num">$0.91</td><td class="num">&#43;21.3%</td><td class="num">&#43;49.2%</td></tr>
+<tr><td><a href="NNN.html">NNN</a></td><td>2026Q3</td><td class="num ath" title="All-time high">$0.91</td><td class="num">&#43;21.3%</td><td class="num">&#43;49.2%</td></tr>
 <tr><td><a href="O.html">O</a></td><td>2026Q3</td><td class="num">$1.12</td><td class="num">&#43;23.1%</td><td class="num">&#43;55.6%</td></tr>
 <tr><td><a href="VICI.html">VICI</a></td><td>2026Q3</td><td class="num">$0.62</td><td class="num">&#43;37.8%</td><td class="num">—</td></tr>
 <tr><td><a href="WPC.html">WPC</a></td><td>2026Q3</td><td class="num">$1.33</td><td class="num">&#43;7.3%</td><td class="num">-0.7%</td></tr>
 </tbody>
 </table>
-<p class="note">Increase compares the latest quarter with the same quarter 5 or 10 years earlier. — means that earlier quarter isn't available.</p>
+<p class="note"><span class="ath">Green</span> means the latest quarter is a new all-time high. Increase compares the latest quarter with the same quarter 5 or 10 years earlier. — means that earlier quarter isn't available.</p>
 
 <footer>AFFO per share (diluted), as reported. Every figure links to its source. Generated 2026-11-11.</footer>
 </body>
