@@ -13,6 +13,8 @@
   th, td { text-align:left; padding:.4rem .6rem; border-bottom:1px solid var(--line); }
   td.num { text-align:right; font-variant-numeric:tabular-nums; }
   .ath { color:var(--up); font-weight:600; }
+  .legend { color:var(--muted); font-size:.9rem; padding-left:1.2rem; margin-top:1rem; }
+  .legend li { margin:.25rem 0; }
   .oneoff { color:var(--muted); font-style:italic; }
   tr.restart td { border-top:2px solid var(--fg); }
   .restart-tag { font-size:.75rem; color:var(--muted); border:1px solid var(--line); border-radius:3px; padding:0 .3rem; white-space:nowrap; }
@@ -47,7 +49,11 @@
 <tr><td><a href="WPC.html">WPC</a></td><td>2026Q3</td><td class="num">$1.33</td><td class="num">&#43;7.3%</td><td class="num">-0.7%</td></tr>
 </tbody>
 </table>
-<p class="note"><span class="ath">Green</span> means the latest quarter is a new all-time high. Increase compares the latest quarter with the same quarter 5 or 10 years earlier. — means that earlier quarter isn't available.</p>
+<ul class="legend">
+<li><span class="ath">Green</span>: the latest quarter is a new all-time high.</li>
+<li>5y / 10y increase: the latest quarter compared with the same quarter 5 or 10 years earlier.</li>
+<li>—: that earlier quarter isn't available.</li>
+</ul>
 
 <footer>AFFO per share (diluted), as reported. Every figure links to its source. Generated 2026-11-11.</footer>
 </body>
