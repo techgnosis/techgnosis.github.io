@@ -10,6 +10,11 @@
   a { color:var(--link); }
   table { border-collapse:collapse; width:100%; }
   th, td { text-align:left; padding:.4rem .6rem; border-bottom:1px solid var(--line); }
+  th.num { text-align:right; }
+  .sortable th button { font:inherit; font-weight:600; color:inherit; background:none; border:0; padding:0; cursor:pointer; white-space:nowrap; }
+  .sortable th button::after { content:"\2195"; color:var(--muted); margin-left:.25rem; font-weight:400; }
+  .sortable th[aria-sort=ascending] button::after { content:"\2191"; color:var(--fg); }
+  .sortable th[aria-sort=descending] button::after { content:"\2193"; color:var(--fg); }
   td.num { text-align:right; font-variant-numeric:tabular-nums; }
   .ath { color:var(--up); font-weight:600; }
   .cut { color:var(--down); font-weight:600; }
@@ -18,6 +23,16 @@
   .oneoff { color:var(--muted); font-style:italic; }
   tr.restart td { border-bottom:2px solid var(--fg); }
   .restart-tag { font-size:.75rem; color:var(--muted); border:1px solid var(--line); border-radius:3px; padding:0 .3rem; white-space:nowrap; }
+  .gain { display:block; color:var(--muted); font-size:.75rem; font-weight:400; font-style:normal; white-space:nowrap; }
+  .legend .gain { display:inline; }
+  .score { margin:0 0 2rem; max-width:32rem; }
+  .criteria .about { display:block; color:var(--muted); font-size:.85rem; }
+  .criteria tr.crit td { font-weight:600; }
+  .criteria tr.crit .about { font-weight:400; }
+  .criteria tr.sub td { color:var(--muted); border-bottom:0; padding-top:.15rem; padding-bottom:.15rem; }
+  .criteria tr.sub td:first-child { padding-left:1.6rem; }
+  .criteria tr.sub .about { font-size:.8rem; }
+  .criteria tr.total td { border-top:2px solid var(--fg); font-weight:600; }
   .note { color:var(--muted); font-size:.9rem; }
   .intro { margin-bottom:1.5rem; }
   footer { margin-top:2rem; color:var(--muted); font-size:.85rem; }
@@ -32,31 +47,68 @@
 <p><strong>AFFO (adjusted funds from operations)</strong> is the industry's attempt at a truer measure. Start with profit, add back depreciation, remove gains and losses the company considers unusual, then subtract the money actually spent keeping properties in good shape. What's left is roughly the cash available to pay dividends. <strong>AFFO per share</strong> divides that by the number of shares, so it's a rough guide to how much cash backs each share. If it grows steadily, the dividend has room to grow too.</p>
 <p>Each company calculates AFFO a little differently, so it's best for comparing a company with its own past rather than for precise comparisons between companies. Every figure here comes from the company's own earnings releases, and each links to its source.</p>
 </section>
-<table>
-<thead><tr><th>Symbol</th><th>Latest</th><th style="text-align:right">AFFO / share</th><th style="text-align:right">Payout</th><th style="text-align:right">Dividend / share</th></tr></thead>
+<table class="sortable">
+<thead><tr><th><button type="button">Symbol</button></th><th><button type="button">Latest</button></th><th class="num"><button type="button">AFFO / share</button></th><th class="num"><button type="button">Payout</button></th><th class="num"><button type="button">Dividend / share</button></th><th class="num"><button type="button">Quarters</button></th><th class="num"><button type="button">AFFO growth</button></th><th class="num"><button type="button">Dividend growth</button></th><th class="num"><button type="button">Score</button></th></tr></thead>
 <tbody>
-<tr><td><a href="ADC.html">ADC</a></td><td>2026Q3</td><td class="num ath" title="All-time high">$1.15</td><td class="num">70%</td><td class="num">$0.801</td></tr>
-<tr><td><a href="EPR.html">EPR</a></td><td>2026Q3</td><td class="num ath" title="All-time high">$1.54</td><td class="num ath" title="All-time low payout ratio">60%</td><td class="num">$0.93</td></tr>
-<tr><td><a href="EPRT.html">EPRT</a></td><td>2026Q3</td><td class="num ath" title="All-time high">$0.51</td><td class="num">63%</td><td class="num">$0.32</td></tr>
-<tr><td><a href="FCPT.html">FCPT</a></td><td>2026Q3</td><td class="num ath" title="All-time high">$0.46</td><td class="num">80%</td><td class="num">$0.3666</td></tr>
-<tr><td><a href="GLPI.html">GLPI</a></td><td>2026Q3</td><td class="num ath" title="All-time high">$1.04</td><td class="num">79%</td><td class="num">$0.82</td></tr>
-<tr><td><a href="GTY.html">GTY</a></td><td>2026Q3</td><td class="num ath" title="All-time high">$0.64</td><td class="num">76%</td><td class="num">$0.485</td></tr>
-<tr><td><a href="MAA.html">MAA</a></td><td>2026Q3</td><td class="num">$1.79</td><td class="num">85%</td><td class="num">$1.53</td></tr>
-<tr><td><a href="NLCP.html">NLCP</a></td><td>2026Q3</td><td class="num">$0.49</td><td class="num">88%</td><td class="num">$0.43</td></tr>
-<tr><td><a href="NNN.html">NNN</a></td><td>2026Q3</td><td class="num ath" title="All-time high">$0.91</td><td class="num">68%</td><td class="num ath" title="All-time high dividend">$0.62</td></tr>
-<tr><td><a href="O.html">O</a></td><td>2026Q3</td><td class="num">$1.12</td><td class="num">73%</td><td class="num">$0.813</td></tr>
-<tr><td><a href="VICI.html">VICI</a></td><td>2026Q3</td><td class="num">$0.62</td><td class="num">74%</td><td class="num ath" title="All-time high dividend">$0.46</td></tr>
-<tr><td><a href="WPC.html">WPC</a></td><td>2026Q3</td><td class="num">$1.33</td><td class="num">71%</td><td class="num ath" title="All-time high dividend">$0.95</td></tr>
+<tr><td><a href="ADC.html">ADC</a></td><td>2026Q3</td><td class="num ath" title="All-time high">$1.15</td><td class="num">70%</td><td class="num">$0.801</td><td class="num">46</td><td class="num">&#43;6.3%/yr</td><td class="num">&#43;5.1%/yr</td><td class="num"><strong>84</strong></td></tr>
+<tr><td><a href="EPR.html">EPR</a></td><td>2026Q3</td><td class="num ath" title="All-time high">$1.54</td><td class="num ath" title="All-time low payout ratio">60%</td><td class="num">$0.93</td><td class="num">20</td><td class="num">&#43;10.9%/yr</td><td class="num">&#43;4.4%/yr</td><td class="num"><strong>85</strong></td></tr>
+<tr><td><a href="EPRT.html">EPRT</a></td><td>2026Q3</td><td class="num ath" title="All-time high">$0.51</td><td class="num">63%</td><td class="num">$0.32</td><td class="num">32</td><td class="num">&#43;9.3%/yr</td><td class="num">&#43;5.4%/yr</td><td class="num"><strong>84</strong></td></tr>
+<tr><td><a href="FCPT.html">FCPT</a></td><td>2026Q3</td><td class="num ath" title="All-time high">$0.46</td><td class="num">80%</td><td class="num">$0.3666</td><td class="num">42</td><td class="num">&#43;4.5%/yr</td><td class="num">&#43;4.0%/yr</td><td class="num"><strong>68</strong></td></tr>
+<tr><td><a href="GLPI.html">GLPI</a></td><td>2026Q3</td><td class="num ath" title="All-time high">$1.04</td><td class="num">79%</td><td class="num">$0.82</td><td class="num">21</td><td class="num">&#43;3.5%/yr</td><td class="num">&#43;3.9%/yr</td><td class="num"><strong>74</strong></td></tr>
+<tr><td><a href="GTY.html">GTY</a></td><td>2026Q3</td><td class="num ath" title="All-time high">$0.64</td><td class="num">76%</td><td class="num">$0.485</td><td class="num">54</td><td class="num">&#43;9.9%/yr</td><td class="num">&#43;6.8%/yr</td><td class="num"><strong>100</strong></td></tr>
+<tr><td><a href="MAA.html">MAA</a></td><td>2026Q3</td><td class="num">$1.79</td><td class="num">85%</td><td class="num">$1.53</td><td class="num">92</td><td class="num">&#43;6.4%/yr</td><td class="num">&#43;4.3%/yr</td><td class="num"><strong>51</strong></td></tr>
+<tr><td><a href="NLCP.html">NLCP</a></td><td>2026Q3</td><td class="num">$0.49</td><td class="num">88%</td><td class="num">$0.43</td><td class="num">21</td><td class="num">&#43;13.7%/yr</td><td class="num">&#43;12.4%/yr</td><td class="num"><strong>34</strong></td></tr>
+<tr><td><a href="NNN.html">NNN</a></td><td>2026Q3</td><td class="num ath" title="All-time high">$0.91</td><td class="num">68%</td><td class="num ath" title="All-time high dividend">$0.62</td><td class="num">55</td><td class="num">&#43;4.8%/yr</td><td class="num">&#43;3.4%/yr</td><td class="num"><strong>69</strong></td></tr>
+<tr><td><a href="O.html">O</a></td><td>2026Q3</td><td class="num">$1.12</td><td class="num">73%</td><td class="num">$0.813</td><td class="num">66</td><td class="num">&#43;5.6%/yr</td><td class="num">&#43;3.9%/yr</td><td class="num"><strong>61</strong></td></tr>
+<tr><td><a href="VICI.html">VICI</a></td><td>2026Q3</td><td class="num">$0.62</td><td class="num">74%</td><td class="num ath" title="All-time high dividend">$0.46</td><td class="num">33</td><td class="num">&#43;7.2%/yr</td><td class="num">&#43;7.0%/yr</td><td class="num"><strong>89</strong></td></tr>
+<tr><td><a href="WPC.html">WPC</a></td><td>2026Q3</td><td class="num">$1.33</td><td class="num">71%</td><td class="num ath" title="All-time high dividend">$0.95</td><td class="num">11</td><td class="num">&#43;4.4%/yr</td><td class="num">&#43;3.7%/yr</td><td class="num"><strong>78</strong>*</td></tr>
 </tbody>
 </table>
+<script>
+
+
+
+document.querySelectorAll("table.sortable").forEach(function (table) {
+  var heads = table.tHead.rows[0].cells;
+  var body = table.tBodies[0];
+  
+  function value(cell) {
+    var t = cell.textContent.trim();
+    if (t === "" || t === "—") return null;
+    var n = parseFloat(t.replace(/[$%*+,]|\/yr/g, ""));
+    return isNaN(n) || /[A-Za-z]/.test(t.replace("/yr", "")) ? t : n;
+  }
+  Array.prototype.forEach.call(heads, function (th, col) {
+    th.querySelector("button").addEventListener("click", function () {
+      var rows = Array.prototype.slice.call(body.rows);
+      var numeric = rows.some(function (r) { return typeof value(r.cells[col]) === "number"; });
+      
+      
+      var dir = numeric ? -1 : 1;
+      if (th.getAttribute("aria-sort") === (dir === 1 ? "ascending" : "descending")) dir = -dir;
+      rows.sort(function (a, b) {
+        var x = value(a.cells[col]), y = value(b.cells[col]);
+        if (x === null || y === null) return (x === null) - (y === null);
+        return (x < y ? -1 : x > y ? 1 : 0) * dir;
+      });
+      rows.forEach(function (r) { body.appendChild(r); });
+      Array.prototype.forEach.call(heads, function (h) { h.removeAttribute("aria-sort"); });
+      th.setAttribute("aria-sort", dir === 1 ? "ascending" : "descending");
+    });
+  });
+});
+</script>
 <ul class="legend">
-<li>Each row is the company's latest quarter. Payout is the dividend as a percent of AFFO.</li>
+<li>Click a column heading to sort by it, and again to reverse. Each row is the company's latest quarter. Payout is the dividend as a percent of AFFO.</li>
 <li><span class="ath">Green</span>: the latest quarter set a new all-time high (AFFO, dividend) or a new all-time low (payout).</li>
 <li><span class="cut">Red</span>: the latest dividend is lower than the quarter before.</li>
 <li><span class="oneoff">Grey</span>: a quarter inflated by a one-time item the company left in its AFFO, such as a legal settlement or back rent. It doesn't count toward highs.</li>
-<li>—: no dividend recorded for that quarter.</li>
+<li>Quarters: how many quarters the growth figures and the score are measured over, from the last restart (or the first quarter on record) to the latest quarter.</li>
+<li>Growth: how fast AFFO and the dividend per share have grown since the last restart (or since the first quarter on record), as a yearly rate. It runs from the first high of that stretch to the latest high, spread over the time up to the latest quarter, so a long wait for a new high pulls it down.</li>
+<li>Score: only one REIT scores 100, the one with the most dependable dividend growth, and every other score is relative to it. Each REIT's page shows which criteria cost it points. *: less than five years of history.</li>
+<li>—: no dividend recorded for that quarter, or not enough history to measure growth.</li>
 </ul>
 
-<footer>AFFO per share (diluted), as reported. Every figure links to its source. Generated 2026-11-11.</footer>
+<footer>AFFO per share (diluted), as reported. Every figure links to its source. Generated 2026-11-12.</footer>
 </body>
 </html>

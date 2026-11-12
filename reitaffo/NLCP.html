@@ -10,6 +10,11 @@
   a { color:var(--link); }
   table { border-collapse:collapse; width:100%; }
   th, td { text-align:left; padding:.4rem .6rem; border-bottom:1px solid var(--line); }
+  th.num { text-align:right; }
+  .sortable th button { font:inherit; font-weight:600; color:inherit; background:none; border:0; padding:0; cursor:pointer; white-space:nowrap; }
+  .sortable th button::after { content:"\2195"; color:var(--muted); margin-left:.25rem; font-weight:400; }
+  .sortable th[aria-sort=ascending] button::after { content:"\2191"; color:var(--fg); }
+  .sortable th[aria-sort=descending] button::after { content:"\2193"; color:var(--fg); }
   td.num { text-align:right; font-variant-numeric:tabular-nums; }
   .ath { color:var(--up); font-weight:600; }
   .cut { color:var(--down); font-weight:600; }
@@ -18,6 +23,16 @@
   .oneoff { color:var(--muted); font-style:italic; }
   tr.restart td { border-bottom:2px solid var(--fg); }
   .restart-tag { font-size:.75rem; color:var(--muted); border:1px solid var(--line); border-radius:3px; padding:0 .3rem; white-space:nowrap; }
+  .gain { display:block; color:var(--muted); font-size:.75rem; font-weight:400; font-style:normal; white-space:nowrap; }
+  .legend .gain { display:inline; }
+  .score { margin:0 0 2rem; max-width:32rem; }
+  .criteria .about { display:block; color:var(--muted); font-size:.85rem; }
+  .criteria tr.crit td { font-weight:600; }
+  .criteria tr.crit .about { font-weight:400; }
+  .criteria tr.sub td { color:var(--muted); border-bottom:0; padding-top:.15rem; padding-bottom:.15rem; }
+  .criteria tr.sub td:first-child { padding-left:1.6rem; }
+  .criteria tr.sub .about { font-size:.8rem; }
+  .criteria tr.total td { border-top:2px solid var(--fg); font-weight:600; }
   .note { color:var(--muted); font-size:.9rem; }
   .intro { margin-bottom:1.5rem; }
   footer { margin-top:2rem; color:var(--muted); font-size:.85rem; }
@@ -27,6 +42,26 @@
 
 <p><a href="index.html">&larr; All REITs</a></p>
 <h1>NLCP AFFO per share</h1>
+<section class="score">
+<table class="criteria">
+<thead><tr><th>Score</th><th class="num">Points</th></tr></thead>
+<tbody>
+<tr><td>Starting score</td><td class="num">100</td></tr>
+<tr class="crit"><td>Dividend growth</td><td class="num cut">&minus;50</td></tr>
+<tr class="sub"><td>Size of raises<span class="about">How big the dividend raises are in a typical year</span></td><td class="num">&minus;3</td></tr>
+<tr class="sub"><td>Consistency of raises<span class="about">How far the weaker years fall short of a typical year</span></td><td class="num">&minus;47</td></tr>
+<tr class="sub"><td>Track record<span class="about">Less than five years of history since the last restart</span></td><td class="num">0</td></tr>
+<tr class="crit"><td>AFFO health</td><td class="num cut">&minus;8</td></tr>
+<tr class="sub"><td>AFFO dips<span class="about">Times AFFO fell instead of rising</span></td><td class="num">&minus;8</td></tr>
+<tr class="sub"><td>AFFO keeping up<span class="about">Whether AFFO grows as fast as the dividend raises</span></td><td class="num">0</td></tr>
+<tr class="crit"><td>Payout cushion</td><td class="num cut">&minus;8</td></tr>
+<tr class="sub"><td>Payout above 80%<span class="about">Less room left to keep raising the dividend</span></td><td class="num">&minus;8</td></tr>
+<tr class="sub"><td>Payout above 100%<span class="about">The dividend isn&#39;t covered by AFFO</span></td><td class="num">0</td></tr>
+<tr class="crit"><td>Dividend cuts<span class="about">How often and how deeply the dividend was cut since the last restart</span></td><td class="num">0</td></tr>
+<tr class="total"><td>NLCP score (the best in the group is <a href="GTY.html">GTY</a>)</td><td class="num">34</td></tr>
+</tbody>
+</table>
+</section>
 <table>
 <thead><tr><th>Quarter</th><th style="text-align:right">AFFO / share</th><th style="text-align:right">Payout</th><th style="text-align:right">Dividend / share</th><th>AFFO source</th><th>Dividend source</th></tr></thead>
 <tbody>
@@ -35,22 +70,22 @@
 <tr><td>2026Q1</td><td class="num">$0.48</td><td class="num">90%</td><td class="num">$0.43</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/135/newlake-capital-partners-reports-first-quarter-2026/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/135/newlake-capital-partners-reports-first-quarter-2026/" rel="noopener">source</a></td></tr>
 <tr><td>2025Q4</td><td class="num">$0.51</td><td class="num">84%</td><td class="num">$0.43</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/130/newlake-capital-partners-reports-fourth-quarter-and/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/130/newlake-capital-partners-reports-fourth-quarter-and/" rel="noopener">source</a></td></tr>
 <tr><td>2025Q3</td><td class="num">$0.52</td><td class="num">83%</td><td class="num">$0.43</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/122/newlake-capital-partners-reports-third-quarter-2025/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/122/newlake-capital-partners-reports-third-quarter-2025/" rel="noopener">source</a></td></tr>
-<tr><td>2025Q2</td><td class="num ath" title="All-time high">$0.55</td><td class="num">78%</td><td class="num">$0.43</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/118/newlake-capital-partners-reports-second-quarter-2025/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/118/newlake-capital-partners-reports-second-quarter-2025/" rel="noopener">source</a></td></tr>
+<tr><td>2025Q2</td><td class="num ath" title="All-time high">$0.55<span class="gain">&#43;3.8% in 4q</span></td><td class="num">78%</td><td class="num">$0.43</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/118/newlake-capital-partners-reports-second-quarter-2025/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/118/newlake-capital-partners-reports-second-quarter-2025/" rel="noopener">source</a></td></tr>
 <tr><td>2025Q1</td><td class="num">$0.51</td><td class="num">84%</td><td class="num">$0.43</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/114/newlake-capital-partners-reports-first-quarter-2025/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/114/newlake-capital-partners-reports-first-quarter-2025/" rel="noopener">source</a></td></tr>
 <tr><td>2024Q4</td><td class="num">$0.52</td><td class="num">83%</td><td class="num">$0.43</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/110/newlake-capital-partners-reports-fourth-quarter-and/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/110/newlake-capital-partners-reports-fourth-quarter-and/" rel="noopener">source</a></td></tr>
 <tr><td>2024Q3</td><td class="num">$0.51</td><td class="num">84%</td><td class="num">$0.43</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/104/newlake-capital-partners-reports-third-quarter-2024/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/104/newlake-capital-partners-reports-third-quarter-2024/" rel="noopener">source</a></td></tr>
-<tr><td>2024Q2</td><td class="num ath" title="All-time high">$0.53</td><td class="num">81%</td><td class="num ath" title="All-time high dividend">$0.43</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/98/newlake-capital-partners-reports-second-quarter-2024/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/98/newlake-capital-partners-reports-second-quarter-2024/" rel="noopener">source</a></td></tr>
-<tr><td>2024Q1</td><td class="num ath" title="All-time high">$0.52</td><td class="num">79%</td><td class="num ath" title="All-time high dividend">$0.41</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/93/newlake-capital-partners-reports-first-quarter-2024/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/93/newlake-capital-partners-reports-first-quarter-2024/" rel="noopener">source</a></td></tr>
-<tr><td>2023Q4</td><td class="num ath" title="All-time high">$0.51</td><td class="num">78%</td><td class="num ath" title="All-time high dividend">$0.40</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/86/newlake-capital-partners-reports-fourth-quarter-and/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/86/newlake-capital-partners-reports-fourth-quarter-and/" rel="noopener">source</a></td></tr>
+<tr><td>2024Q2</td><td class="num ath" title="All-time high">$0.53<span class="gain">&#43;1.9% in 1q</span></td><td class="num">81%</td><td class="num ath" title="All-time high dividend">$0.43<span class="gain">&#43;4.9% in 1q</span></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/98/newlake-capital-partners-reports-second-quarter-2024/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/98/newlake-capital-partners-reports-second-quarter-2024/" rel="noopener">source</a></td></tr>
+<tr><td>2024Q1</td><td class="num ath" title="All-time high">$0.52<span class="gain">&#43;2.0% in 1q</span></td><td class="num">79%</td><td class="num ath" title="All-time high dividend">$0.41<span class="gain">&#43;2.5% in 1q</span></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/93/newlake-capital-partners-reports-first-quarter-2024/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/93/newlake-capital-partners-reports-first-quarter-2024/" rel="noopener">source</a></td></tr>
+<tr><td>2023Q4</td><td class="num ath" title="All-time high">$0.51<span class="gain">&#43;2.0% in 4q</span></td><td class="num">78%</td><td class="num ath" title="All-time high dividend">$0.40<span class="gain">&#43;2.6% in 4q</span></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/86/newlake-capital-partners-reports-fourth-quarter-and/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/86/newlake-capital-partners-reports-fourth-quarter-and/" rel="noopener">source</a></td></tr>
 <tr><td>2023Q3</td><td class="num">$0.47</td><td class="num">83%</td><td class="num">$0.39</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/79/newlake-capital-partners-reports-third-quarter-2023/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/79/newlake-capital-partners-reports-third-quarter-2023/" rel="noopener">source</a></td></tr>
 <tr><td>2023Q2</td><td class="num">$0.46</td><td class="num">85%</td><td class="num">$0.39</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/72/newlake-capital-partners-reports-second-quarter-2023/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/72/newlake-capital-partners-reports-second-quarter-2023/" rel="noopener">source</a></td></tr>
 <tr><td>2023Q1</td><td class="num">$0.46</td><td class="num">85%</td><td class="num">$0.39</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/68/newlake-capital-partners-reports-first-quarter-2023/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/68/newlake-capital-partners-reports-first-quarter-2023/" rel="noopener">source</a></td></tr>
-<tr><td>2022Q4</td><td class="num ath" title="All-time high">$0.50</td><td class="num">78%</td><td class="num ath" title="All-time high dividend">$0.39</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/64/newlake-capital-partners-reports-fourth-quarter-and/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/64/newlake-capital-partners-reports-fourth-quarter-and/" rel="noopener">source</a></td></tr>
-<tr><td>2022Q3</td><td class="num ath" title="All-time high">$0.49</td><td class="num ath" title="All-time low payout ratio">76%</td><td class="num ath" title="All-time high dividend">$0.37</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/57/newlake-capital-partners-reports-third-quarter-2022/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/57/newlake-capital-partners-reports-third-quarter-2022/" rel="noopener">source</a></td></tr>
-<tr><td>2022Q2</td><td class="num ath" title="All-time high">$0.40</td><td class="num">87%</td><td class="num ath" title="All-time high dividend">$0.35</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/51/newlake-capital-partners-reports-secondquarter-2022/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/51/newlake-capital-partners-reports-secondquarter-2022/" rel="noopener">source</a></td></tr>
-<tr><td>2022Q1</td><td class="num ath" title="All-time high">$0.37</td><td class="num">89%</td><td class="num ath" title="All-time high dividend">$0.33</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/41/newlake-capital-partners-reports-first-quarter-2022/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/41/newlake-capital-partners-reports-first-quarter-2022/" rel="noopener">source</a></td></tr>
-<tr><td>2021Q4</td><td class="num ath" title="All-time high">$0.32</td><td class="num">97%</td><td class="num ath" title="All-time high dividend">$0.31</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/34/newlake-capital-partners-reports-fourth-quarter-and/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/34/newlake-capital-partners-reports-fourth-quarter-and/" rel="noopener">source</a></td></tr>
-<tr><td>2021Q3</td><td class="num ath" title="All-time high">$0.31</td><td class="num ath" title="All-time low payout ratio">77%</td><td class="num ath" title="All-time high dividend">$0.24</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/27/newlake-capital-partners-reports-third-quarter-2021/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/27/newlake-capital-partners-reports-third-quarter-2021/" rel="noopener">source</a></td></tr>
+<tr><td>2022Q4</td><td class="num ath" title="All-time high">$0.50<span class="gain">&#43;2.0% in 1q</span></td><td class="num">78%</td><td class="num ath" title="All-time high dividend">$0.39<span class="gain">&#43;5.4% in 1q</span></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/64/newlake-capital-partners-reports-fourth-quarter-and/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/64/newlake-capital-partners-reports-fourth-quarter-and/" rel="noopener">source</a></td></tr>
+<tr><td>2022Q3</td><td class="num ath" title="All-time high">$0.49<span class="gain">&#43;22.5% in 1q</span></td><td class="num ath" title="All-time low payout ratio">76%</td><td class="num ath" title="All-time high dividend">$0.37<span class="gain">&#43;5.7% in 1q</span></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/57/newlake-capital-partners-reports-third-quarter-2022/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/57/newlake-capital-partners-reports-third-quarter-2022/" rel="noopener">source</a></td></tr>
+<tr><td>2022Q2</td><td class="num ath" title="All-time high">$0.40<span class="gain">&#43;8.1% in 1q</span></td><td class="num">87%</td><td class="num ath" title="All-time high dividend">$0.35<span class="gain">&#43;6.1% in 1q</span></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/51/newlake-capital-partners-reports-secondquarter-2022/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/51/newlake-capital-partners-reports-secondquarter-2022/" rel="noopener">source</a></td></tr>
+<tr><td>2022Q1</td><td class="num ath" title="All-time high">$0.37<span class="gain">&#43;15.6% in 1q</span></td><td class="num">89%</td><td class="num ath" title="All-time high dividend">$0.33<span class="gain">&#43;6.5% in 1q</span></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/41/newlake-capital-partners-reports-first-quarter-2022/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/41/newlake-capital-partners-reports-first-quarter-2022/" rel="noopener">source</a></td></tr>
+<tr><td>2021Q4</td><td class="num ath" title="All-time high">$0.32<span class="gain">&#43;3.2% in 1q</span></td><td class="num">97%</td><td class="num ath" title="All-time high dividend">$0.31<span class="gain">&#43;29.2% in 1q</span></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/34/newlake-capital-partners-reports-fourth-quarter-and/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/34/newlake-capital-partners-reports-fourth-quarter-and/" rel="noopener">source</a></td></tr>
+<tr><td>2021Q3</td><td class="num ath" title="All-time high">$0.31<span class="gain">&#43;10.7% in 1q</span></td><td class="num ath" title="All-time low payout ratio">77%</td><td class="num ath" title="All-time high dividend">$0.24</td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/27/newlake-capital-partners-reports-third-quarter-2021/" rel="noopener">source</a></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/27/newlake-capital-partners-reports-third-quarter-2021/" rel="noopener">source</a></td></tr>
 <tr><td>2021Q2</td><td class="num ath" title="All-time high">$0.28</td><td class="num"></td><td class="num"></td><td><a href="https://ir.newlake.com/news-events/press-releases/detail/21/newlake-capital-partners-reports-second-quarter-and-first/" rel="noopener">source</a></td><td></td></tr>
 </tbody>
 </table>
@@ -58,11 +93,12 @@
 <li><span class="ath">Green</span>: a new all-time high, higher than every earlier quarter. The first quarter on record is green too, since it is the best so far.</li>
 <li>Payout: the dividend as a percent of AFFO. <span class="ath">Green</span> here marks a new all-time <em>low</em>.</li>
 <li>Dividend: the common dividend per share declared for the quarter. <span class="ath">Green</span>: only when the cents go up, so a sub-cent raise isn't highlighted. <span class="cut">Red</span>: lower than the previous quarter's dividend.</li>
+<li><span class="gain">+2.1% in 3q</span> under a high: how far it rose above the previous high, and how many calendar quarters that took. Gains use the actual figures, even for dividends. The first high after a restart has none.</li>
 <li><span class="oneoff">Grey</span>: a quarter inflated by a one-time item the company left in its AFFO, such as a legal settlement or back rent. It doesn't count toward highs.</li>
 <li><span class="restart-tag">highs restart</span>: the business fundamentally reset here. This quarter is the new starting point, so as the first quarter of the new run it is highlighted as a high (AFFO, dividend) and a low (payout). Later quarters are compared with it, and the quarters below the line no longer count.</li>
 <li>Notes: what the one-time item was in a one-off quarter, or why the business reset at a restart.</li>
 </ul>
 
-<footer>AFFO per share (diluted), as reported. Every figure links to its source. Generated 2026-11-11.</footer>
+<footer>AFFO per share (diluted), as reported. Every figure links to its source. Generated 2026-11-12.</footer>
 </body>
 </html>
